@@ -1,0 +1,553 @@
+:root {
+    --amber: #d2962c;
+}
+
+/* header */
+
+
+/* Nền vàng cam cho header */
+.custom-navbar {
+    background-color: var(--amber) !important;
+    padding: 8px 0;
+}
+
+/* Logo */
+.navbar-brand {
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+/* Link nav */
+.nav-link {
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    padding: 4px 0;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Hover + active underline */
+.nav-link:hover,
+.nav-link.active {
+    color: #fff !important;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+}
+
+/* Nút kính lúp */
+.search-btn {
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* css navbar */
+.navbar-toggler {
+    border: none;
+    /* bỏ border đen */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+/* Khi màn hình <= 1024px thì menu thành bar trắng */
+@media (max-width: 1024px) {}
+
+/* footer */
+:root {
+    --amber: #d2962c;
+    --white: #fff;
+    --muted: rgba(255, 255, 255, .78);
+    --muter: rgba(255, 255, 255, .58);
+    --line: rgba(255, 255, 255, .22);
+    --shadow: 0 10px 30px rgba(0, 0, 0, .08);
+}
+
+/* ---------------- Container theo 4 mốc ---------------- */
+.custom-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+    max-width: 360px;
+}
+
+/* ~375 */
+@media (min-width:744px) {
+    .custom-container {
+        max-width: 704px;
+        padding: 0 20px;
+    }
+}
+
+@media (min-width:1024px) {
+    .custom-container {
+        max-width: 960px;
+        padding: 0 24px;
+    }
+}
+
+@media (min-width:1440px) {
+    .custom-container {
+        max-width: 1280px;
+        padding: 0 32px;
+    }
+}
+
+/* ---------------- Footer layout (FLEX) ---------------- */
+.site-footer {
+    background: var(--amber);
+    color: var(--white);
+    padding-top: 20px;
+}
+
+/* TOP: social + cột nội dung  */
+.footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    /* cho xuống dòng khi hẹp */
+    align-items: flex-start;
+    gap: 16px;
+    /* sẽ tăng ở mốc lớn */
+}
+
+/* Social */
+.social {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 14px;
+}
+
+.social a {
+    color: var(--white);
+    font-size: 20px;
+    text-decoration: none;
+    opacity: .95;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social a:hover {
+    opacity: 1;
+}
+
+/* Social hướng dọc MẶC ĐỊNH (376–1439) */
+.social {
+    flex-direction: column;
+}
+
+/* ≥1440: social ngang */
+@media (min-width:1440px) {
+    .social {
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+/* ≤375: social ngang + căn giữa */
+@media (max-width:375px) {
+    .social {
+        flex-direction: row;
+        justify-content: center;
+        gap: 18px;
+    }
+}
+
+/* Khối cột nội dung (thay .footer-grid bằng flex) */
+.footer-cols {
+    display: flex;
+    flex: 1 1 auto;
+    /* chiếm phần còn lại bên cạnh social */
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+/* Mỗi cột */
+.fcol {
+    min-width: 180px;
+    flex: 1 1 50%;
+    /* ~2 cột ở vùng nhỏ hơn tablet */
+}
+
+.fcol h5 {
+    margin: 0 0 10px 0;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.fcol ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.fcol li {
+    color: var(--muted);
+    margin: 6px 0;
+}
+
+.fcol li.active {
+    color: var(--white);
+}
+
+/* Subscribe (flex thay cho grid) */
+.fcol.subscribe .sub-input {
+    display: flex;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+.sub-input input {
+    flex: 1 1 auto;
+    height: 34px;
+    max-width: 200px;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, .15);
+    color: var(--white);
+    padding: 0 10px;
+    outline: none;
+    font-size: 14px;
+}
+
+.sub-input input::placeholder {
+    color: var(--muter);
+}
+
+.sub-input button {
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, .12);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.sub-input button:hover {
+    background: rgba(255, 255, 255, .2);
+}
+
+.hint {
+    margin: 10px 0 0 0;
+    color: var(--muter);
+    font-size: 12px;
+    max-width: 30ch;
+}
+
+/* Divider */
+.footer-divider {
+    height: 1px;
+    background: var(--line);
+    margin: 16px auto;
+}
+
+/* BOTTOM */
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding-bottom: 20px;
+}
+
+.brand {
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+
+.getnow {
+    height: 32px;
+    padding: 0 18px;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--white);
+    cursor: pointer;
+    box-shadow: var(--shadow);
+}
+
+.getnow:hover {
+    background: rgba(255, 255, 255, .12);
+}
+
+/* ---------------- Breakpoints chi tiết ---------------- */
+
+/* ≥744: thành 4 cột (mỗi cột ~25%) và nới gap */
+@media (min-width:744px) {
+    .footer-top {
+        gap: 20px;
+    }
+
+    .footer-cols .fcol {
+        flex: 1 1 calc(25% - 15px);
+    }
+
+    /* 4 cột co giãn */
+    .hint {
+        max-width: 36ch;
+    }
+}
+
+/* ≥1024: nới spacing */
+@media (min-width:1024px) {
+    .footer-top {
+        gap: 24px;
+    }
+
+    .footer-cols {
+        gap: 24px;
+    }
+}
+
+/* ≤743.98: 1 cột (stack dọc) + subscribe giữa */
+@media (max-width:743.98px) {
+    .footer-cols .fcol {
+        flex: 1 1 100%;
+    }
+
+    .fcol.subscribe {
+        text-align: center;
+    }
+
+    .fcol.subscribe .sub-input {
+        max-width: 300px;
+        margin: 6px auto 0;
+    }
+
+    .hint {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Vùng flex chứa các cột */
+.footer-cols {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+/* Cột chung: 4 cột trên một hàng ở >=744px */
+.fcol {
+    min-width: 180px;
+    flex: 1 1 calc(25% - 12px);
+    /* 4 cột/row, co giãn theo chiều rộng */
+}
+
+/* Subscribe: bình thường (>=744px) đứng cùng hàng như các cột khác */
+.fcol.subscribe {
+    text-align: left;
+    /* về trái khi là 1 trong 4 cột */
+}
+
+/* ---------- Mobile ≤744px: Subscribe xuống hàng & căn giữa ---------- */
+@media (max-width: 744px) {
+    .fcol {
+        /* mỗi cột full width */
+        flex: 1 1 100%;
+    }
+
+    /* Đưa Subscribe xuống sau các cột còn lại */
+    .fcol.subscribe {
+        order: 4;
+        /* đảm bảo đứng cuối */
+        text-align: center;
+        /* căn giữa văn bản */
+    }
+
+    .fcol.subscribe .sub-input {
+        max-width: 50px;
+        /* giới hạn chiều rộng input */
+        margin-left: auto;
+        /* căn giữa input + button */
+        margin-right: auto;
+        justify-content: center;
+    }
+
+    .hint {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* ---------- Spacing lớn hơn ở breakpoint cao (tuỳ chọn) ---------- */
+@media (min-width: 1024px) {
+    .footer-cols {
+        gap: 24px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .footer-cols {
+        gap: 28px;
+    }
+}
+
+/* ==== FIX keep Subscribe cùng hàng ở ≥744px ==== */
+
+/* cột social: cố định bề ngang ở màn ≥744px */
+@media (min-width: 744px) {
+    .social {
+        flex-direction: column;
+        /* social dọc mặc định 744–1439 */
+        gap: 14px;
+        flex: 0 0 72px;
+        /* << cố định bề ngang social */
+    }
+}
+
+/* social ngang ở ≥1440 và ≤375 giữ nguyên như bạn đã làm */
+@media (min-width: 1440px) {
+    .social {
+        flex-direction: row;
+        gap: 20px;
+        flex: 0 0 auto;
+    }
+}
+
+@media (max-width: 375px) {
+    .social {
+        flex-direction: row;
+        justify-content: center;
+        gap: 18px;
+        flex: 0 0 100%;
+    }
+}
+
+/* vùng các cột nội dung */
+.footer-cols {
+    display: flex;
+    flex: 1 1 auto;
+    /* chiếm toàn bộ phần còn lại bên cạnh social */
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+/* mặc định: 2 cột/row (cho <744px, sẽ bị override bên dưới) */
+.fcol {
+    min-width: 160px;
+    /* giảm từ 180 -> 160 để linh hoạt hơn */
+    flex: 1 1 50%;
+}
+
+/* ≥744px: ép đúng 4 cột/row trong phần còn lại (không wrap) */
+@media (min-width: 744px) {
+    .footer-cols {
+        gap: 20px;
+    }
+
+    .footer-cols .fcol {
+        flex: 0 1 auto;
+        /* ngừng dùng basis theo % để khỏi vượt */
+        min-width: 0;
+        width: calc((100% - 3 * 20px) / 4);
+        /* 4 cột chia đều, trừ 3 khoảng gap */
+    }
+}
+
+/* ≥1024px: nới khoảng cách */
+@media (min-width: 1024px) {
+    .footer-cols {
+        gap: 24px;
+    }
+
+    .footer-cols .fcol {
+        width: calc((100% - 3 * 24px) / 4);
+    }
+}
+
+/* ≤744px: mỗi cột full width; Subscribe xuống hàng và căn giữa */
+@media (max-width: 743.98px) {
+    .footer-cols .fcol {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .fcol.subscribe {
+        order: 4;
+        text-align: center;
+    }
+
+    .fcol.subscribe .sub-input {
+        max-width: 300px;
+        margin: 6px auto 0;
+        justify-content: center;
+    }
+}
+
+/* Subscribe input: không wrap ở ≥744px */
+.fcol.subscribe .sub-input {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    max-width: 280px;
+    width: 100%;
+}
+
+.sub-input input {
+    flex: 1 1 auto;
+    min-width: 0;
+    height: 34px;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, .15);
+    color: var(--white);
+    padding: 0 10px;
+    outline: none;
+    font-size: 14px;
+}
+
+.sub-input button {
+    flex: 0 0 42px;
+    height: 34px;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    background: rgba(255, 255, 255, .12);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.site-footer .fcol ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.site-footer .fcol li {
+    margin: 6px 0;
+    color: #F5B747;
+}
+
+.site-footer .fcol a {
+    text-decoration: none;
+    color: #F5B747;
+    /* mặc định */
+    transition: color .2s;
+}
+
+.site-footer .fcol a:hover {
+    color: #fff;
+    /* hover cũng trắng */
+}
+
+.site-footer a.active {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}

@@ -1,0 +1,491 @@
+/* section-1  */
+.hero {
+    background: #d2962c;
+    /* màu nền giống ảnh */
+    padding: 60px 20px;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-text {
+    color: #fff;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.hero-text .sub {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.hero-text .small {
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: left;
+}
+
+.btn {
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-black {
+    background-color: #2B261D;
+    color: #fff
+}
+
+.btn-yellow {
+    background-color: #F5B747;
+    color: black;
+}
+
+.hero-image img {
+    width: 280px;
+    max-width: 100%;
+}
+
+/* -------- Responsive -------- */
+@media (min-width: 744px) {
+    .hero-container {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .hero-text {
+        flex: 1;
+        text-align: left;
+    }
+
+    .hero-text h1 {
+        font-size: 56px;
+    }
+
+    .hero-image img {
+        width: 360px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-text h1 {
+        font-size: 64px;
+    }
+
+    .hero-image img {
+        width: 420px;
+    }
+}
+
+/* end section-1  */
+
+/* section-2 */
+.fp-section {
+    background-color: #DEA02E;
+    padding-top: 50px;
+}
+
+.fp-section .fp-features {
+    display: flex;
+    gap: 20px;
+}
+
+.fp-section .f-item {
+    color: #fff
+}
+
+/* base */
+.fp-section .fp-features {
+    display: flex;
+    flex-wrap: wrap;
+    /* cho xuống dòng khi cần */
+    gap: 20px;
+}
+
+.fp-section .f-item {
+    color: #fff;
+    flex: 1 1 0;
+    /* >=744px: 3 item cùng hàng */
+    min-width: 220px;
+    /* chống co quá nhỏ */
+}
+
+/* < 744px: 2 item hàng đầu, item cuối xuống hàng và CĂN GIỮA */
+@media (max-width: 743px) {
+    .fp-section .f-item {
+        flex: 1 1 calc(50% - 10px);
+        /* 2 cột */
+        min-width: 0;
+    }
+
+    .fp-section .f-item:last-child {
+        flex: 0 0 100%;
+        /* chiếm trọn 1 hàng */
+        display: flex;
+        justify-content: center;
+        /* căn giữa item cuối */
+        text-align: left;
+        /* tuỳ bạn muốn center cả text thì đổi thành center */
+    }
+}
+
+/* < 359px: mỗi f-item 1 hàng */
+@media (max-width: 358px) {
+    .fp-section .f-item {
+        flex: 0 0 100%;
+    }
+
+    .fp-section .f-item:last-child {
+        justify-content: flex-start;
+        /* trở lại mặc định nếu không muốn center ở rất nhỏ */
+    }
+}
+
+/* ==== PLAN BLOCK ==== */
+.fp-plan {
+    display: grid;
+    gap: 18px;
+    align-items: center;
+    padding: 20px 0 28px;
+}
+
+/* ảnh điện thoại */
+.plan-media {
+    display: flex;
+    justify-content: center;
+}
+
+.phone-frame {
+    position: relative;
+    display: inline-block;
+    padding: 14px 12px;
+}
+
+.phone-frame img {
+    display: block;
+    width: 100%;
+    border-radius: 100px;
+
+}
+
+
+/* text bên phải */
+.plan-text h2 {
+    margin: 0 0 10px;
+    color: #fff;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 1.15;
+}
+
+.plan-lead {
+    margin: 0 0 12px;
+    color: rgba(0, 0, 0, .85);
+    font-weight: 600;
+}
+
+.plan-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+.plan-bullets li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: black;
+    /* hoặc #000 tùy theme */
+}
+
+.plan-bullets .text-light {
+    color: white;
+}
+
+.check-icon {
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+/* màu khác nhau cho từng icon */
+.check-icon.white {
+    color: #fff;
+    /* xanh dương */
+}
+
+
+/* ====== Breakpoints theo 744/1024/1440 ====== */
+@media (min-width: 744px) {
+    .fp-plan {
+        grid-template-columns: .95fr 1.05fr;
+        /* trái ảnh – phải text */
+        gap: 24px;
+        padding: 28px 0 40px;
+    }
+
+    .phone-frame img {
+        width: 320px;
+    }
+
+    .arrow {
+        width: 140px;
+        top: 44px;
+    }
+
+    .plan-text h2 {
+        font-size: 32px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .phone-frame img {
+        width: 360px;
+    }
+
+    .arrow {
+        width: 160px;
+    }
+
+    .plan-text h2 {
+        font-size: 36px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .phone-frame img {
+        width: 400px;
+    }
+
+    .arrow {
+        width: 180px;
+    }
+
+    .plan-text h2 {
+        font-size: 40px;
+    }
+}
+
+/* Ẩn khi màn hình nhỏ hơn 744px */
+@media (max-width: 744px) {
+    .fp-plan {
+        display: none;
+    }
+}
+
+/* end section-2 */
+
+/* section 3 */
+.fp-testimonials {
+    background-color: #D2982D;
+    display: flex;
+    gap: 150px;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+.testimonial {
+    position: relative;
+
+    flex: 1;
+    background: #2e2b3b;
+    color: #fff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    max-width: 400px;
+}
+
+.testimonial::before {
+    content: "‹";
+    /* hoặc dùng '\2039' */
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    transform: translateY(-50%);
+    font-size: 70px;
+    color: #F5B747;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.testimonial::before:hover {
+    opacity: 1;
+}
+
+/* Mũi tên phải */
+.testimonial::after {
+    content: "›";
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    transform: translateY(-50%);
+    font-size: 70px;
+    color: #F5B747;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.testimonial::after:hover {
+    opacity: 1;
+}
+
+.t-text {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.t-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.t-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.t-name {
+    font-weight: 600;
+    margin: 0;
+}
+
+.t-role {
+    font-size: 13px;
+    color: #ccc;
+    margin: 0;
+}
+
+/* Ẩn card Jack khi màn nhỏ hơn 744px */
+@media (max-width: 744px) {
+    .hide-mobile {
+        display: none;
+    }
+
+    .fp-testimonials {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial {
+        max-width: 350px;
+    }
+}
+
+/*end section-3  */
+
+/* section -4 */
+
+/* FAQ Section */
+/* FAQ Section */
+.fp-faq {
+    background-color: #DEA02E;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.faq-subtitle {
+    font-size: 15px;
+    color: #f5e5c6;
+    margin-bottom: 25px;
+}
+
+/* FAQ List */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-item {
+    color: #fff;
+    padding: 15px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transition: color 0.3s;
+}
+
+.faq-item:hover {
+    color: #000;
+}
+
+.faq-item i {
+    font-size: 14px;
+    color: #fff;
+}
+
+/* Footer part */
+.faq-footer {
+    margin-top: 50px;
+}
+
+.faq-experience {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 10px;
+}
+
+.faq-highlight {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.download-btn {
+    background: #000;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.download-btn:hover {
+    background: #333;
+}
