@@ -25,6 +25,10 @@
     filter: drop-shadow(var(--shadow));
 }
 
+.cloud-item p {
+    max-width: 60%;
+}
+
 /* Icon + text trong mây */
 .cloud-icon {
     font-size: 20px;
