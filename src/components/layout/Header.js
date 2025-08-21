@@ -28,20 +28,20 @@ export default function Header() {
                     <div className="collapse navbar-collapse justify-content-end" id="mainNav">
                         <ul className="navbar-nav gap-3 align-items-center">
                             <li className="nav-item">
-                                <NavLink to="/" end className="nav-link">Home</NavLink>
+                                <NavLink to="/" end className="nav-link"  style={{ fontSize: "16px" }}>Home</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink to="/info" className="nav-link">Info</NavLink>
+                                <NavLink to="/info" className="nav-link" style={{ fontSize: "16px" }}>Info</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink to="/shop" className="nav-link">Shop</NavLink>
+                                <NavLink to="/shop" className="nav-link" style={{ fontSize: "16px" }}>Shop</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink to="/tos" className="nav-link">TOS</NavLink>
+                                <NavLink to="/tos" className="nav-link" style={{ fontSize: "16px" }}>TOS</NavLink>
                             </li>
                             {/* Nút kính lúp */}
                             <li className="nav-item">
-                                <button className="btn btn-link nav-link search-btn">🔍</button>
+                                <img src="/images/button-search.png" className="searchBtn" />
                             </li>
                         </ul>
                     </div>

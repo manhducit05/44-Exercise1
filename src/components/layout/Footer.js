@@ -10,6 +10,8 @@ import { faTwitter, faFacebook, faInstagram } from "@fortawesome/free-brands-svg
 export default function Footer() {
     return (
         <footer className="site-footer">
+            {/* <img className="tree" src="/images/bg-components/footer2.png" />
+            <img className="wave" src="/images/bg-components/footer.png" /> */}
             <div className="footer-top custom-container">
                 {/* Social (cột trái) */}
                 <ul className="social">

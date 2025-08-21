@@ -20,11 +20,11 @@
     text-align: center;
 }
 
-.hero-text h1 {
-    font-size: 40px;
-    font-weight: 700;
+.hero-text .title {
+    font-size: 48px;
+    font-weight: 600;
     margin-bottom: 16px;
-    line-height: 1.2;
+    line-height: 95%;
 }
 
 .hero-text .sub {
@@ -33,9 +33,10 @@
 }
 
 .hero-text .small {
-    font-size: 14px;
+    font-size: 12px;
     opacity: 0.9;
     margin-bottom: 20px;
+    color: #000;
 }
 
 .hero-cta {
@@ -46,7 +47,7 @@
 }
 
 .btn {
-    padding: 10px 18px;
+    padding: 10px 16px;
     border-radius: 8px;
     font-size: 14px;
     font-weight: 600;
@@ -68,7 +69,13 @@
     max-width: 100%;
 }
 
+.f-item .f-desc {
+    font-size: 12px;
+}
+
 /* -------- Responsive -------- */
+@media (min-width: 375px) {}
+
 @media (min-width: 744px) {
     .hero-container {
         flex-direction: row;
@@ -80,8 +87,22 @@
         text-align: left;
     }
 
-    .hero-text h1 {
-        font-size: 56px;
+    .hero-text .title {
+        font-size: 60px;
+    }
+
+    .hero-text .sub {
+        font-size: 18px;
+    }
+
+    .hero-text .small {
+        font-size: 14px;
+    }
+
+    .btn {
+
+        font-size: 16px;
+
     }
 
     .hero-image img {
@@ -89,14 +110,33 @@
     }
 }
 
+
+
 @media (min-width: 1024px) {
-    .hero-text h1 {
-        font-size: 64px;
-    }
 
     .hero-image img {
         width: 420px;
     }
+}
+
+
+@media (min-width: 1440px) {
+    .hero-text .title {
+        font-size: 80px;
+    }
+
+    .hero-text .sub {
+        font-size: 20px;
+    }
+
+    .f-item .f-title {
+        font-size: 24px;
+    }
+
+    .f-item .f-desc {
+        font-size: 16px;
+    }
+
 }
 
 /* end section-1  */
@@ -110,6 +150,8 @@
 .fp-section .fp-features {
     display: flex;
     gap: 20px;
+    align-items: center;
+    justify-content: center;
 }
 
 .fp-section .f-item {
@@ -130,6 +172,8 @@
     /* >=744px: 3 item cùng hàng */
     min-width: 220px;
     /* chống co quá nhỏ */
+    max-width: 400px;
+    padding: 0 20px;
 }
 
 /* < 744px: 2 item hàng đầu, item cuối xuống hàng và CĂN GIỮA */
@@ -162,6 +206,7 @@
         /* trở lại mặc định nếu không muốn center ở rất nhỏ */
     }
 }
+
 
 /* ==== PLAN BLOCK ==== */
 .fp-plan {
@@ -236,6 +281,19 @@
     /* xanh dương */
 }
 
+.plan-text .plan-title {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.plan-text .plan-lead {
+    font-size: 34px;
+}
+
+.plan-text li {
+    font-size: 14px;
+}
 
 /* ====== Breakpoints theo 744/1024/1440 ====== */
 @media (min-width: 744px) {
@@ -255,9 +313,7 @@
         top: 44px;
     }
 
-    .plan-text h2 {
-        font-size: 32px;
-    }
+
 }
 
 @media (min-width: 1024px) {
@@ -283,8 +339,16 @@
         width: 180px;
     }
 
-    .plan-text h2 {
-        font-size: 40px;
+    .plan-text .plan-title {
+        font-size: 48px;
+    }
+
+    .plan-text .plan-lead {
+        font-size: 32px;
+    }
+
+    .plan-text li {
+        font-size: 20px;
     }
 }
 
@@ -316,6 +380,11 @@
     border-radius: 16px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
     max-width: 400px;
+}
+
+.testimonial .t-text {
+    font-size: 12px;
+    font-weight: 400;
 }
 
 .testimonial::before {
@@ -376,12 +445,24 @@
 .t-name {
     font-weight: 600;
     margin: 0;
+    font-size: 16px;
 }
 
 .t-role {
     font-size: 13px;
     color: #ccc;
     margin: 0;
+}
+
+
+@media (min-width: 744px) {}
+
+@media (min-width: 1024px) {}
+
+@media (min-width: 1440px) {
+    .testimonial .t-text {
+        font-size: 14px;
+    }
 }
 
 /* Ẩn card Jack khi màn nhỏ hơn 744px */
@@ -397,6 +478,11 @@
 
     .testimonial {
         max-width: 350px;
+    }
+
+    .t-name {
+        font-size: 24px;
+
     }
 }
 
@@ -456,6 +542,20 @@
     color: #fff;
 }
 
+.faq-title {
+    font-size: 32px;
+    padding: 0 20px;
+}
+
+.faq-subtitle {
+    font-size: 14px;
+    color: #000;
+}
+
+.faq-item {
+    font-size: 12px;
+}
+
 /* Footer part */
 .faq-footer {
     margin-top: 50px;
@@ -474,12 +574,21 @@
     margin-bottom: 20px;
 }
 
+.faq-experience {
+    font-size: 16px;
+}
+
+.faq-highlight {
+    font-size: 16px;
+    padding: 20px 0;
+}
+
 .download-btn {
     background: #000;
     color: #fff;
     padding: 12px 28px;
     border-radius: 8px;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     border: none;
     cursor: pointer;
@@ -489,3 +598,43 @@
 .download-btn:hover {
     background: #333;
 }
+
+
+@media (min-width: 744px) {
+    .faq-title {
+        font-size: 40px;
+    }
+
+    .faq-subtitle {
+        font-size: 16px;
+    }
+
+    .faq-item {
+        font-size: 16px;
+    }
+
+    .faq-experience {
+        font-size: 24px;
+    }
+    .faq-highlight {
+        font-size: 24px;
+    }
+    .download-btn{
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .faq-title {
+        font-size: 48px;
+    }
+
+    .faq-item {
+        font-size: 20px;
+    }
+    .faq-highlight {
+        font-size: 36px;
+    }
+}
+
+@media (min-width: 1440px) {}

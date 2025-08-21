@@ -64,14 +64,12 @@
     position: absolute;
     right: 10px;
     top: -14px;
-    background: #ffb84d;
     color: #1a1a1a;
     width: 34px;
     height: 34px;
     border-radius: 10px;
     display: grid;
     place-items: center;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, .18);
 }
 
 /* Title + intro */
@@ -120,20 +118,33 @@
     margin: 0 0 10px;
     color: var(--muted);
     line-height: 1.6;
+    font-size: 10px;
 }
 
 .tos-scroll ul {
     margin: 0 0 10px 18px;
 }
 
+.tos-card h1 {
+    font-weight: 600;
+}
+
 /* Responsive spacing */
+@media (min-width:375px) {
+
+
+    .tos-card h1 {
+        font-size: 12px;
+    }
+}
+
 @media (min-width:744px) {
     .tos-card {
         padding: 22px 22px 26px;
     }
 
     .tos-card h1 {
-        font-size: 30px;
+        font-size: 16px;
     }
 }
 
@@ -145,6 +156,15 @@
     .tos-scroll {
         max-height: 62vh;
     }
+
+    .tos-card h1 {
+        font-size: 32px;
+    }
+
+    .tos-scroll p {
+
+        font-size: 14px;
+    }
 }
 
 @media (min-width:1440px) {
@@ -153,6 +173,11 @@
     }
 
     .tos-card h1 {
-        font-size: 32px;
+        font-size: 40px;
+    }
+
+    .tos-scroll p {
+
+        font-size: 16px;
     }
 }

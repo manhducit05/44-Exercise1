@@ -1,0 +1,266 @@
+/* theme khớp dự án */
+:root {
+    --amber: #d2962c;
+    --white: #fff;
+    --muted: rgba(255, 255, 255, .76);
+    --shadow: 0 18px 40px rgba(0, 0, 0, .18);
+}
+
+.product-page {
+    background: var(--amber);
+    color: var(--white);
+    padding: 28px 0 48px;
+    font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+/* container đồng bộ 4 mốc */
+.custom-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+    max-width: 360px;
+}
+
+@media (min-width:744px) {
+    .custom-container {
+        max-width: 704px;
+        padding: 0 20px;
+    }
+}
+
+@media (min-width:1024px) {
+    .custom-container {
+        max-width: 960px;
+        padding: 0 24px;
+    }
+}
+
+@media (min-width:1440px) {
+    .custom-container {
+        max-width: 1280px;
+        padding: 0 32px;
+    }
+}
+
+/* ===== HERO ===== */
+.pp-hero {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+/* media trái */
+.pp-hero-media {
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.pp-hero-media img {
+    width: 90%;
+    height: auto;
+    display: block;
+}
+
+
+/* text phải */
+.pp-hero-text {
+    max-width: 450px;
+}
+
+.pp-hero-text .pp-title {
+    font-size: 60px;
+    margin: 0 0 8px 0;
+    font-weight: 700;
+    font-size: clamp(28px, 4.4vw, 44px);
+}
+
+.pp-hero-text .pp-lead {
+    color: var(--muted);
+    /* max-width: 48ch; */
+    font-size: 18px;
+}
+
+.pp-cta {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-custom {
+    border: none;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 10px 50px;
+}
+
+.btn-buy {
+    background-color: #F5B747;
+}
+
+.btn-cart {
+    background-color: #D2982D;
+    color: #fff;
+    border: 3px solid #F5B747;
+}
+
+
+
+
+
+
+/* 1440+: thoáng hơn */
+@media (min-width:1440px) {
+    .pp-hero {
+        gap: 28px;
+    }
+
+    .pp-hero-text .pp-title {
+        font-size: 64px;
+    }
+
+    .pp-hero-text .pp-lead {
+        font-size: 20px;
+    }
+
+}
+
+/* ===== GALLERY thumbs ===== */
+.pp-gallery {
+    margin-top: 22px;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.pp-gallery .thumb {
+    border-radius: 10px;
+}
+
+.pp-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Mobile ≤ 743px (base 375) */
+
+
+/* Tablet 744–1023px */
+@media (max-width: 1023.98px) {
+
+    .third,
+    .fourth {
+        display: none;
+    }
+
+    .pp-gallery {
+        flex-wrap: wrap;
+        gap: 50%;
+
+    }
+
+    .pp-hero {
+        gap: 30%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .pp-title,
+    .pp-lead {
+        text-align: center;
+    }
+
+}
+
+/* Laptop 1024–1439px */
+@media (min-width: 1024px) and (max-width: 1439.98px) {
+    .third {
+        display: none;
+    }
+}
+
+/* Desktop ≥ 1440px */
+
+/* ===== more link ===== */
+.pp-more {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 7px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, .3);
+    color: var(--white);
+    text-decoration: none;
+    background: rgba(255, 255, 255, .08);
+}
+
+.pp-more:hover {
+    background: rgba(255, 255, 255, .16);
+    color: var(--white);
+}
+
+/* PLAN */
+.text-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-desc {
+    font-size: 16px;
+}
+
+/* Mobile ≤ 743px (base 375) */
+@media (max-width: 743.98px) {
+    .plan-title {
+        font-size: 32px;
+    }
+
+    .plan-desc {
+        font-size: 14px;
+    }
+
+    .btn-desc {
+        font-size: 12px;
+    }
+}
+
+/* Tablet 744–1023px */
+@media (min-width: 744px) and (max-width: 1023.98px) {
+    .plan-title {
+        font-size: 36px;
+        padding: 0 100px;
+    }
+
+    .plan-desc {
+        font-size: 16px;
+    }
+}
+
+/* Laptop 1024–1439px */
+@media (min-width: 1024px) and (max-width: 1439.98px) {
+    .plan-title {
+        font-size: 48px;
+        padding: 0 150px;
+
+    }
+
+    .plan-desc {
+        font-size: 24px;
+    }
+}
+
+/* Desktop ≥ 1440px */
+@media (min-width: 1440px) {
+    .plan-title {
+        font-size: 48px;
+        padding: 0 200px;
+
+    }
+
+    .plan-desc {
+        font-size: 24px;
+    }
+}

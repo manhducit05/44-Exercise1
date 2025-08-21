@@ -55,14 +55,22 @@
 }
 
 /* 1024–1439: 2x2 */
-@media (min-width:1024px) and (max-width:1439.98px) {
+@media (min-width: 744px) and (max-width: 1023.98px) {
     .clouds-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 22px 28px;
+        /* khoảng cách ngang/dọc */
     }
 
     .cloud-item {
-        width: 420px;
+        width: 100%;
+        min-width: 0;
+        /* tránh ép rộng gây tràn */
+    }
+
+    /* nếu muốn item lẻ thấp xuống một chút */
+    .cloud-item.down {
+        margin-top: 40px;
     }
 }
 
@@ -107,14 +115,23 @@
     /* 2 item/khung hoặc 1 item/khung */
 }
 
+.cloud-item {
+    font-size: 16px;
+    min-width: 180px;
+    text-align: center;
+}
+
+
+
 /* Cỡ chữ & padding gọn hơn trên mobile */
 @media (max-width:743.98px) {
     .cloud-icon {
         font-size: 18px;
     }
 
+
     .cloud-text {
-        font-size: clamp(12px, 3.4vw, 14px);
+        font-size: 14px;
     }
 }
 
@@ -122,5 +139,46 @@
 @media (max-width:359.98px) {
     .cloud-item {
         padding: 20px 18px;
+    }
+
+    .cloud-item {
+        min-width: 180px;
+    }
+}
+
+/*  */
+@media (min-width:744px) {
+    .down {
+        margin-top: 50px !important;
+        ;
+        width: calc(50% - 50px);
+    }
+
+    .cloud-item {
+        min-width: 250px;
+    }
+}
+
+@media (min-width:1024px) {
+    .down {
+        margin-top: 0px;
+    }
+
+    .cloud-item {
+        min-width: 300px;
+    }
+}
+
+@media (min-width:1440px) {
+    .down {
+        margin-top: 100px;
+    }
+
+    .cloud-text {
+        font-size: 16px;
+    }
+
+    .cloud-item {
+        min-width: 400px;
     }
 }

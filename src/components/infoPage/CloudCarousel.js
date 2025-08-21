@@ -20,19 +20,23 @@ const CLOUD_ITEMS = [
             "Accurate and reliable weather forecasts powered by cloud computing",
     },
     {
-        img: "/images/cloud.jpg",
+        down: true,
+
+        img: "/images/cloud2.png",
         icon: faArrowsRotate,
         text:
             "Compatible with various devices and platforms, including smart home systems",
     },
     {
-        img: "/images/cloud.jpg",
+        img: "/images/cloud3.png",
         icon: faTableCells,
         text:
             "Interactive and user-friendly interface with stunning graphics and animations",
     },
     {
-        img: "/images/cloud.jpg",
+        down: true,
+
+        img: "/images/cloud4.png",
         icon: faBell,
         text:
             "Customizable alerts and notifications for different weather conditions",
@@ -73,7 +77,7 @@ export default function CloudsCarousel() {
                 {CLOUD_ITEMS.map((it, i) => (
                     <article
                         key={i}
-                        className="cloud-item"
+                        className={`cloud-item slide ${i % 2 === 1 ? "down" : ""}`}
                         style={{ backgroundImage: `url(${it.img})` }}
                         aria-label={it.text}
                     >
@@ -108,7 +112,7 @@ export default function CloudsCarousel() {
                     {CLOUD_ITEMS.map((it, i) => (
                         <article
                             key={i}
-                            className="cloud-item slide"
+                            className={`cloud-item slide ${i % 2 === 1 ? "down" : ""}`}
                             style={{ backgroundImage: `url(${it.img})` }}
                             aria-label={it.text}
                         >

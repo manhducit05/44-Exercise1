@@ -51,7 +51,7 @@
     display: block;
     margin: 0 auto;
     /* desktop */
-    width: 100%;
+    width: 85%;
     height: auto;
 }
 
@@ -80,6 +80,8 @@
 .compare-head .name {
     color: var(--white);
     opacity: .95;
+    font-size: 12px;
+    font-weight: 700;
 }
 
 .compare-head .blank {
@@ -101,6 +103,14 @@
     /* border-radius: 6px; */
 }
 
+.compare-row .key {
+    font-size: 12px;
+}
+
+.compare-row .ok {
+    font-size: 10px;
+    color: #000;
+}
 
 .compare-cta {
     text-align: center;
@@ -110,18 +120,52 @@
 .btn-download {
     display: inline-block;
     padding: 10px 18px;
-    border: 1px solid var(--line);
+    border: 3px solid #E0A12E;
     color: var(--white);
     border-radius: 10px;
     text-decoration: none;
-    background: transparent;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .14);
     margin-bottom: 50px;
+    font-size: 12px;
 }
 
 .btn-download:hover {
     background: rgba(255, 255, 255, .12);
 }
+
+
+@media (min-width:744px) {
+    .compare-head .name {
+        font-size: 20px;
+    }
+
+    .compare-row .key {
+        font-size: 16px;
+    }
+
+    .compare-row .ok {
+        font-size: 14px;
+    }
+
+    .btn-download {
+        font-size: 24px;
+    }
+}
+
+@media (min-width:1024px) {
+    .compare-head .name {
+        font-size: 32px;
+    }
+
+    .compare-row .key {
+        font-size: 20px;
+    }
+
+    .compare-row .ok {
+        font-size: 16px;
+    }
+}
+
+@media (min-width:1440px) {}
 
 /* ===== 3) SPECS CLOUDS ===== */
 .info-specs {

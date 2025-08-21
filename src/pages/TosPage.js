@@ -9,7 +9,7 @@ export default function TosPage() {
             <div className="tos-container">
                 <section className="tos-card">
                     <div className="tos-lock" aria-hidden>
-                        <FontAwesomeIcon icon={faLock} />
+                        <img src="/images/lock.png" alt="lock-icon" />
                     </div>
 
                     <h1>Terms Of Service</h1>

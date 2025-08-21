@@ -9,7 +9,7 @@ export default function LandingPage() {
                 <div className="hero-container">
                     {/* Left Text */}
                     <div className="hero-text">
-                        <h1>Your Live <br /> Forecaster</h1>
+                        <div className="title">Your Live <br /> Forecaster</div>
                         <p className="sub">
                             Together We Forecast: Building Dreams,<br /> One Day at a Time!
                         </p>
@@ -18,7 +18,7 @@ export default function LandingPage() {
                         </p>
                         <div className="hero-cta">
                             <button className="btn btn-black">TRY NOW</button>
-                            <button className="btn btn-yellow">FREE TILL 15/JUN/2023</button>
+                            <button className="btn btn-yellow">FREE TILL 15JUN2023</button>
                         </div>
                     </div>
 
@@ -33,9 +33,11 @@ export default function LandingPage() {
                     {/* ===== Features row ===== */}
                     <div className="fp-features">
                         <article className="f-item">
-                            <div className="f-icon"><FontAwesomeIcon icon={faUserCheck} /></div>
+                            <div className="d-flex align-items-center">
+                                <div className="f-icon"><img src="/images/landingIcon1.png" /></div>
+                                <div className="f-title">Personalized</div >
+                            </div>
                             <div>
-                                <h4 className="f-title">Personalized</h4>
                                 <p className="f-desc">
                                     A personalized weather report that shows the best time and place for couples
                                     to enjoy outdoor activities based on their preferences and location.
@@ -44,9 +46,13 @@ export default function LandingPage() {
                         </article>
 
                         <article className="f-item">
-                            <div className="f-icon"><FontAwesomeIcon icon={faImages} /></div>
+                            <div className="d-flex align-items-center ">
+                                <div className="f-icon"><img src="/images/landingIcon2.png" /></div>
+                                <div className="f-title">Gallery</div>
+
+                            </div>
+
                             <div>
-                                <h4 className="f-title">Gallery</h4>
                                 <p className="f-desc">
                                     A cloud gallery that allows users to upload and share their photos and videos
                                     of the sky and the weather with other users and get feedback and tips.
@@ -55,9 +61,11 @@ export default function LandingPage() {
                         </article>
 
                         <article className="f-item">
-                            <div className="f-icon heart"><FontAwesomeIcon icon={faHeart} /></div>
+                            <div className="d-flex align-items-center">
+                                <div className="f-icon "><img src="/images/landingIcon1.png" /></div>
+                                <div className="f-title">Mood Tracker</div>
+                            </div>
                             <div>
-                                <h4 className="f-title">Mood Tracker</h4>
                                 <p className="f-desc">
                                     A mood tracker that analyzes the user's mood based on the weather and suggests
                                     activities, music, or quotes to cheer them up or calm them down.
@@ -75,20 +83,20 @@ export default function LandingPage() {
                         </div>
 
                         <div className="plan-text">
-                            <h2>Plan Your Outdoor<br />Activities with Ease</h2>
+                            <div className="plan-title">Plan Your Outdoor<br />Activities with Ease</div>
                             <p className="plan-lead">Get notified before rain stops.<br />Plan your outdoor activities</p>
 
                             <ul className="plan-bullets">
                                 <li className="text-light">
-                                    <FontAwesomeIcon icon={faCheck} className="check-icon white" />
+                                    <img src="/images/icon-checkbox1.png" style={{ marginRight: "4px" }} />
                                     Share your weather stories and photos.
                                 </li>
                                 <li>
-                                    <FontAwesomeIcon icon={faCheck} className="check-icon " />
+                                    <img src="/images/icon-checkbox2.png" style={{ marginRight: "4px" }} />
                                     Custom weather alerts and notifications.
                                 </li>
                                 <li>
-                                    <FontAwesomeIcon icon={faCheck} className="check-icon " />
+                                    <img src="/images/icon-checkbox2.png" style={{ marginRight: "4px" }} />
                                     Smart weather integrations for your home.
                                 </li>
                             </ul>
@@ -140,19 +148,30 @@ export default function LandingPage() {
                     <div className="faq-list">
                         <div className="faq-item">
                             <span>How can I customize the Juniper app to suit my needs?</span>
-                            <i className="fas fa-chevron-right"></i>
+                            <i className="fas fa-chevron-right">
+                                <img src="/images/rightArrow.png" />
+                            </i>
                         </div>
                         <div className="faq-item">
                             <span>How can I share my weather updates with my partner?</span>
-                            <i className="fas fa-chevron-right"></i>
+                            <i className="fas fa-chevron-right">
+                                <img src="/images/rightArrow.png" />
+
+                            </i>
                         </div>
                         <div className="faq-item">
                             <span>How long is the free trial for the Juniper app?</span>
-                            <i className="fas fa-chevron-right"></i>
+                            <i className="fas fa-chevron-right">
+                                <img src="/images/rightArrow.png" />
+
+                            </i>
                         </div>
                         <div className="faq-item">
                             <span>What happens after the free trial ends?</span>
-                            <i className="fas fa-chevron-right"></i>
+                            <i className="fas fa-chevron-right">
+                                <img src="/images/rightArrow.png" />
+
+                            </i>
                         </div>
                     </div>
 

@@ -12,10 +12,7 @@
 }
 
 /* Logo */
-.navbar-brand {
-    font-size: 18px;
-    letter-spacing: 1px;
-}
+
 
 /* Link nav */
 .nav-link {
@@ -45,10 +42,7 @@
 }
 
 /* Nút kính lúp */
-.search-btn {
-    border: none;
-    background: transparent;
-    font-size: 16px;
+.searchBtn {
     cursor: pointer;
 }
 
@@ -62,8 +56,6 @@
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
 }
 
-/* Khi màn hình <= 1024px thì menu thành bar trắng */
-@media (max-width: 1024px) {}
 
 /* footer */
 :root {
@@ -84,6 +76,18 @@
 }
 
 /* ~375 */
+@media (min-width:375px) {
+    .custom-container {
+        max-width: 704px;
+        padding: 0 20px;
+    }
+
+    .navbar-brand {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+}
+
 @media (min-width:744px) {
     .custom-container {
         max-width: 704px;
@@ -96,12 +100,20 @@
         max-width: 960px;
         padding: 0 24px;
     }
+
+
+
 }
 
 @media (min-width:1440px) {
     .custom-container {
         max-width: 1280px;
         padding: 0 32px;
+    }
+
+    .navbar-brand {
+        font-size: 21px;
+        letter-spacing: 1px;
     }
 }
 
@@ -551,3 +563,5 @@
     color: #fff;
     font-weight: 600;
 }
+
+/*  */
