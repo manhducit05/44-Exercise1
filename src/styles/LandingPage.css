@@ -334,10 +334,17 @@
         /* trái ảnh – phải text */
         gap: 24px;
         padding: 28px 0 40px;
+        padding-bottom: 100px;
+    }
+
+    .phone-frame {
+        padding-bottom: 100px;
     }
 
     .phone-frame img {
-        width: 320px;
+        height: 300px;
+
+
     }
 
     .arrow {
@@ -653,6 +660,13 @@
     background: #333;
 }
 
+.fp-plan {
+    display: none;
+}
+
+.fp-section {
+    padding-bottom: 100px;
+}
 
 @media (min-width: 744px) {
     .faq-title {
@@ -678,6 +692,9 @@
     .download-btn {
         font-size: 20px;
     }
+    .fp-section {
+        padding-bottom: 200px;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -692,8 +709,41 @@
     .faq-highlight {
         font-size: 36px;
     }
+
+    .fp-plan {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .plan-arrow {
+        position: absolute;
+        top: 22%;
+        right: -48px;
+        width: 130px;
+        height: 20px;
+        background: url("../../public/images/arrow.png") no-repeat center;
+        background-size: contain;
+    }
 }
 
-@media (min-width: 1440px) {}
+@media (min-width: 1440px) {
+    .plan-arrow {
+        position: absolute;
+        top: 24%;
+        right: -40px;
+        width: 130px;
+        height: 20px;
+        background: url("../../public/images/arrow.png") no-repeat center;
+        background-size: contain;
+    }
+}
 
 /*  */
+
+
+
+.plan-media {
+    position: relative;
+}

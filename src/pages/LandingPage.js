@@ -78,6 +78,8 @@ export default function LandingPage() {
                             <div className="phone-frame">
                                 <img src="/images/phone2.png" alt="Phone mockup" />
                             </div>
+                            <div className="plan-arrow"></div>
+
                         </div>
 
                         <div className="plan-text">
