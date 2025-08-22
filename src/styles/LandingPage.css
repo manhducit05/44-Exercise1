@@ -1,8 +1,11 @@
+.landing-page {
+}
+
 /* section-1  */
 .hero {
-    background: #d2962c;
-    /* màu nền giống ảnh */
     padding: 60px 20px;
+    padding-bottom: 200px;
+
 }
 
 .hero-container {
@@ -143,8 +146,31 @@
 
 /* section-2 */
 .fp-section {
-    background-color: #DEA02E;
-    padding-top: 50px;
+    background: linear-gradient(180deg, #E0A12E 0%, rgba(224, 161, 46, 0) 100%);
+
+    position: relative;
+    padding-top: 200px;
+    padding-bottom: 100px;
+}
+
+/* Lớp SÓNG ở mép trên – full width */
+.fp-features ::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -90px;
+    /* đẩy lên khỏi content */
+    width: 100vw;
+    height: 90px;
+    /* chỉnh theo tỉ lệ ảnh */
+    background: url("../../public/images/bg-components/landing.svg") no-repeat center top;
+    background-size: cover;
+    /* SVG/PNG tự căng đủ rộng */
+    pointer-events: none;
+    z-index: 0;
+    transform: scaleX(-1);
+
+    /* dưới nội dung */
 }
 
 .fp-section .fp-features {
@@ -230,11 +256,15 @@
 
 .phone-frame img {
     display: block;
-    width: 100%;
+    height: 436px;
+    width: auto;
     border-radius: 100px;
 
 }
 
+.plan-text {
+    max-height: 320px;
+}
 
 /* text bên phải */
 .plan-text h2 {
@@ -281,7 +311,7 @@
     /* xanh dương */
 }
 
-.plan-text .plan-title {
+.plan-text .fp-plan-title {
     color: #fff;
     font-size: 22px;
     font-weight: 600;
@@ -339,7 +369,7 @@
         width: 180px;
     }
 
-    .plan-text .plan-title {
+    .plan-text .fp-plan-title {
         font-size: 48px;
     }
 
@@ -362,17 +392,38 @@
 /* end section-2 */
 
 /* section 3 */
+
 .fp-testimonials {
     background-color: #D2982D;
     display: flex;
     gap: 150px;
     justify-content: center;
     padding: 60px 0;
+
+}
+
+.fp-testimonials {
+    position: relative;
+} 
+
+ .fp-testimonials::before {
+    opacity: 0.7;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -400px;
+    width: 100%;
+    height: 200%;
+    background: url("../../public/images/bg-components/landing2.svg") no-repeat center top;
+    background-size: cover;
+    pointer-events: none;
+    z-index: 1;
+
 }
 
 .testimonial {
     position: relative;
-
+    z-index: 2;
     flex: 1;
     background: #2e2b3b;
     color: #fff;
@@ -389,7 +440,7 @@
 
 .testimonial::before {
     content: "‹";
-    /* hoặc dùng '\2039' */
+    /* hoặc dùng '\2039'  */
     position: absolute;
     top: 50%;
     left: -30px;
@@ -493,9 +544,10 @@
 /* FAQ Section */
 /* FAQ Section */
 .fp-faq {
-    background-color: #DEA02E;
+    background-color: #D2982D;
     padding: 60px 20px;
     text-align: center;
+    padding-bottom: 150px;
 }
 
 .faq-container {
@@ -616,10 +668,12 @@
     .faq-experience {
         font-size: 24px;
     }
+
     .faq-highlight {
         font-size: 24px;
     }
-    .download-btn{
+
+    .download-btn {
         font-size: 20px;
     }
 }
@@ -632,9 +686,15 @@
     .faq-item {
         font-size: 20px;
     }
+
     .faq-highlight {
         font-size: 36px;
     }
 }
 
 @media (min-width: 1440px) {}
+
+body {
+    background: rgba(210, 152, 45, 1);
+
+}

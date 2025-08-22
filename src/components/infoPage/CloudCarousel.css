@@ -3,6 +3,10 @@
     --shadow: 0 18px 40px rgba(0, 0, 0, .18);
 }
 
+.cloud-grid {
+    padding-bottom: 200px;
+}
+
 /* ====== CARD DÙNG BACKGROUND ẢNH ====== */
 .cloud-item {
     position: relative;

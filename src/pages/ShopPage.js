@@ -5,9 +5,9 @@ import ShopCarousel from "../components/shopPage/ShopCarousel";
 export default function ShopPage() {
     return (
         <main className="product-page">
-            <div className="container-xxl custom-container">
+            <div className=" ">
                 {/* HERO */}
-                <section className="pp-hero">
+                <section className="pp-hero custom-container">
                     <div className="pp-hero-media">
                         <img src="/images/bigProduct.png" alt="Atmos app preview" />
                     </div>
@@ -26,7 +26,7 @@ export default function ShopPage() {
                     </div>
                 </section>
                 {/* GALLERY (thumbs) */}
-                <section className="pp-gallery">
+                <section className="pp-gallery custom-container">
                     <div className="thumb">
                         <img src="/images/list-item1.png" alt="preview 1" />
                     </div>
@@ -40,7 +40,12 @@ export default function ShopPage() {
                         <img src="/images/list-item4.png" alt="preview 4" />
                     </div>
                 </section>
-                <div className="text-center">
+
+                <section className="cloud-shop">
+                    <img src="/images/bg-components/shop.svg" />
+                </section>
+
+                <div className="btn-show text-center">
                     <Link to="/shop" className="pp-more mt-4 mb-4">show all products</Link>
                 </div>
                 {/* PLAN */}

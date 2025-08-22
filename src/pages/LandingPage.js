@@ -1,10 +1,8 @@
 import React from "react";
 import "../styles/LandingPage.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUserCheck, faImages, faHeart, faCheck } from "@fortawesome/free-solid-svg-icons";
 export default function LandingPage() {
     return (
-        <>
+        <div className="landing-page">
             <section className="hero">
                 <div className="hero-container">
                     {/* Left Text */}
@@ -83,7 +81,7 @@ export default function LandingPage() {
                         </div>
 
                         <div className="plan-text">
-                            <div className="plan-title">Plan Your Outdoor<br />Activities with Ease</div>
+                            <div className="fp-plan-title">Plan Your Outdoor<br />Activities with Ease</div>
                             <p className="plan-lead">Get notified before rain stops.<br />Plan your outdoor activities</p>
 
                             <ul className="plan-bullets">
@@ -185,6 +183,6 @@ export default function LandingPage() {
                     </div>
                 </div>
             </section>
-        </>
+        </div>
     );
 }

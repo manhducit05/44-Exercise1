@@ -11,6 +11,7 @@
     color: var(--white);
     padding: 28px 0 48px;
     font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    padding-bottom: 200px;
 }
 
 /* container đồng bộ 4 mốc */
@@ -132,6 +133,8 @@
     gap: 20px;
     display: flex;
     justify-content: center;
+    position: relative;
+    z-index: 2;
 }
 
 .pp-gallery .thumb {
@@ -263,4 +266,26 @@
     .plan-desc {
         font-size: 24px;
     }
+}
+
+/*  */
+.btn-show {
+    position: relative;
+    z-index: 2;
+}
+
+.cloud-shop {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(180deg, #E0A12E 0%, rgba(224, 161, 46, 0) 100%);
+    position: relative;
+}
+
+.cloud-shop img {
+    width: 100%;
+    height: 290px;
+    position: absolute;
+    top: -100px;
+    z-index: 0;
+
 }
