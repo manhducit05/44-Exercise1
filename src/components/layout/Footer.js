@@ -13,6 +13,9 @@ export default function Footer() {
 
             <div className=" footer-dec left"></div>
             <div className="footer-dec right"></div>
+            <div className="footer-cloud">
+                <img src="/images/bg-components/footer.png" />
+            </div>
             <div className="footer-top custom-container">
                 {/* Social (cột trái) */}
                 <ul className="social">

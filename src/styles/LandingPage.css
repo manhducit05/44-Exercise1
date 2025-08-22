@@ -1,4 +1,6 @@
 .landing-page {
+    background-color: #D2982D;
+
 }
 
 /* section-1  */
@@ -404,9 +406,9 @@
 
 .fp-testimonials {
     position: relative;
-} 
+}
 
- .fp-testimonials::before {
+.fp-testimonials::before {
     opacity: 0.7;
     content: "";
     position: absolute;
@@ -694,7 +696,4 @@
 
 @media (min-width: 1440px) {}
 
-body {
-    background: rgba(210, 152, 45, 1);
-
-}
+/*  */

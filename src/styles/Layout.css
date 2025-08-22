@@ -4,6 +4,10 @@
 
 /* header */
 
+header {
+    background-color: #D2982D;
+
+}
 
 /* Nền vàng cam cho header */
 .custom-navbar {
@@ -128,6 +132,8 @@
     align-items: flex-start;
     gap: 16px;
     /* sẽ tăng ở mốc lớn */
+    z-index: 1;
+    position: relative;
 }
 
 /* Social */
@@ -558,9 +564,8 @@
 
 
 .site-footer {
+    background-color: #D2982D;
 
-    background: linear-gradient(180deg, #E0A12E 0%, rgba(224, 161, 46, 0) 100%);
-    
     color: var(--white);
     padding-top: 20px;
     position: relative;
@@ -568,28 +573,24 @@
 }
 
 /* Lớp SÓNG ở mép trên – full width */
-.site-footer::before {
+/* .site-footer::before {
     content: "";
     position: absolute;
     left: 0;
     top: -90px;
-    /* đẩy lên khỏi content */
     width: 100%;
     height: 160px;
-    /* chỉnh theo tỉ lệ ảnh */
     background: url("../../public/images/bg-components/footer.svg") no-repeat center top;
     background-size: cover;
-    /* SVG/PNG tự căng đủ rộng */
     pointer-events: none;
     z-index: 100;
-    /* dưới nội dung */
-}
+} */
 
 /* Icon mây/cây “watermark” ở hai góc */
 
 .footer-dec.left {
     position: absolute;
-    top: -135px;
+    top: -155px;
     /* nhô lên trên sóng một chút */
     height: 80px;
     width: 70px;
@@ -605,7 +606,7 @@
 
 .footer-dec.right {
     position: absolute;
-    top: -160px;
+    top: -180px;
     /* nhô lên trên sóng một chút */
     height: 80px;
     width: 70px;
@@ -676,4 +677,21 @@
     }
 
     /* màn nhỏ ẩn icon cho gọn */
+}
+
+/*  */
+.site
+.footer-cloud {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(180deg, #E0A12E 0%, rgba(224, 161, 46, 0) 100%);
+    position: relative;
+}
+
+.footer-cloud img {
+    width: 100%;
+    height: 290px;
+    position: absolute;
+    top: -100px;
+    z-index: 0;
 }

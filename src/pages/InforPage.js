@@ -70,8 +70,11 @@ export default function Info() {
                 <a href="/download" className="btn-download">DOWNLOAD NOW</a>
             </div>
             {/* ===== Section 3: SPECS CLOUDS ===== */}
+            <div className="specs-title custom-container">Spec’s clouds</div>
             <div className="cloud-element">
-                <div className="top-cloud"></div>
+                <div className="info-cloud">
+                    <img src='/images/bg-components/wave-info.png' />
+                </div>
                 <div className="custom-container">
                     <CloudsCarousel />
                 </div>
