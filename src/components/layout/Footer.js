@@ -38,15 +38,6 @@ export default function Footer() {
 
                 {/* Lưới cột nội dung */}
                 <div className="footer-cols">
-                    {/* <div className="fcol">
-                        <h5>Pages</h5>
-                        <ul>
-                            <li className="active">Home</li>
-                            <li>Info</li>
-                            <li>Shop</li>
-                            <li>TOS</li>
-                        </ul>
-                    </div> */}
                     <div className="fcol">
                         <h5>Pages</h5>
                         <ul>
