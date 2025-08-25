@@ -356,7 +356,7 @@ header {
 
 /* Cột chung: 4 cột trên một hàng ở >=744px */
 .fcol {
-    min-width: 180px;
+    min-width: 90px;
     flex: 1 1 calc(20% - 12px);
     /* 4 cột/row, co giãn theo chiều rộng */
 }
@@ -364,6 +364,7 @@ header {
 /* Subscribe: bình thường (>=744px) đứng cùng hàng như các cột khác */
 .fcol.subscribe {
     text-align: left;
+    min-width: 190px;
     /* về trái khi là 1 trong 4 cột */
 }
 
@@ -420,7 +421,7 @@ header {
     flex-wrap: wrap;
     gap: 16px;
     align-items: start;
-    justify-content: start;
+    justify-content: center;
 }
 
 /* mặc định: 2 cột/row (cho <744px, sẽ bị override bên dưới) */
@@ -647,8 +648,15 @@ header {
         flex-direction: row;
     }
 
-    .fcol {
-        flex: 1;
+    .footer-cols .fcol {
+        max-width: calc((100% - 2*24px)/3);
+        flex: 0 0 calc((100% - 2*24px)/3);
+        padding: 0;
+        margin: 0;
+    }
+
+    .fcol.subscribe {
+        text-align: center;
     }
 
 }
