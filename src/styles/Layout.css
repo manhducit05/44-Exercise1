@@ -130,7 +130,7 @@ header {
     flex-wrap: wrap;
     /* cho xuống dòng khi hẹp */
     align-items: flex-start;
-    gap: 16px;
+    gap: 30px;
     /* sẽ tăng ở mốc lớn */
     z-index: 1;
     position: relative;
@@ -303,7 +303,7 @@ header {
 /* ≥744: thành 4 cột (mỗi cột ~25%) và nới gap */
 @media (min-width:744px) {
     .footer-top {
-        gap: 20px;
+        gap: 30px;
     }
 
     .footer-cols .fcol {
@@ -319,7 +319,7 @@ header {
 /* ≥1024: nới spacing */
 @media (min-width:1024px) {
     .footer-top {
-        gap: 24px;
+        gap: 34px;
     }
 
     .footer-cols {
@@ -329,9 +329,6 @@ header {
 
 /* ≤743.98: 1 cột (stack dọc) + subscribe giữa */
 @media (max-width:743.98px) {
-    .footer-cols .fcol {
-        flex: 1 1 100%;
-    }
 
     .fcol.subscribe {
         text-align: center;
@@ -351,9 +348,10 @@ header {
 /* Vùng flex chứa các cột */
 .footer-cols {
     display: flex;
-    flex: 1 1 auto;
     flex-wrap: wrap;
     gap: 16px;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Cột chung: 4 cột trên một hàng ở >=744px */
@@ -399,33 +397,6 @@ header {
     }
 }
 
-/* ---------- Spacing lớn hơn ở breakpoint cao (tuỳ chọn) ---------- */
-@media (min-width: 1024px) {
-    .footer-cols {
-        gap: 24px;
-    }
-}
-
-@media (min-width: 1440px) {
-    .footer-cols {
-        gap: 28px;
-    }
-}
-
-/* ==== FIX keep Subscribe cùng hàng ở ≥744px ==== */
-
-/* cột social: cố định bề ngang ở màn ≥744px */
-@media (min-width: 744px) {
-    .social {
-        flex-direction: column;
-        /* social dọc mặc định 744–1439 */
-        gap: 14px;
-        flex: 0 0 72px;
-        /* << cố định bề ngang social */
-    }
-}
-
-/* social ngang ở ≥1440 và ≤375 giữ nguyên như bạn đã làm */
 @media (min-width: 1440px) {
     .social {
         flex-direction: row;
@@ -446,10 +417,10 @@ header {
 /* vùng các cột nội dung */
 .footer-cols {
     display: flex;
-    flex: 1 1 auto;
-    /* chiếm toàn bộ phần còn lại bên cạnh social */
     flex-wrap: wrap;
     gap: 16px;
+    align-items: start;
+    justify-content: start;
 }
 
 /* mặc định: 2 cột/row (cho <744px, sẽ bị override bên dưới) */
@@ -467,6 +438,8 @@ header {
         width: calc((100% - 3 * 20px) / 4);
         /* 4 cột chia đều, trừ 3 khoảng gap */
     }
+
+
 }
 
 /* ≥1024px: nới khoảng cách */
@@ -482,10 +455,7 @@ header {
 
 /* ≤744px: mỗi cột full width; Subscribe xuống hàng và căn giữa */
 @media (max-width: 743.98px) {
-    .footer-cols .fcol {
-        flex: 1 1 100%;
-        width: 100%;
-    }
+
 
     .fcol.subscribe {
         order: 4;
@@ -651,6 +621,11 @@ header {
     .footer-dec.right {
         top: -175px;
     }
+
+    .fcol.subscribe {
+        flex: 0 0 100%;
+        /* padding-left: 100px; */
+    }
 }
 
 @media (max-width:744px) {
@@ -666,6 +641,14 @@ header {
 
     .footer-dec.right {
         top: -175px;
+    }
+
+    .social {
+        flex-direction: row;
+    }
+
+    .fcol {
+        flex: 1;
     }
 
 }

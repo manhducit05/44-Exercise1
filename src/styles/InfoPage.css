@@ -64,7 +64,7 @@
 
 /* ===== 2) COMPARISON ===== */
 .info-compare {
-    padding-top: 200px;
+    padding-top: 50px;
     position: relative;
     /* background-color: #E0A12E; */
     background: linear-gradient(180deg, #E0A12E 0%, rgba(224, 161, 46, 0) 100%);
@@ -285,8 +285,8 @@
 /* Tiêu đề có gạch dọc */
 .specs-title {
     margin: 0 0 12px;
-    padding-left: 18px;
     position: relative;
+    left: -50px;
     color: #fff;
     opacity: .95;
     font-weight: 700;
@@ -295,7 +295,7 @@
 .specs-title::before {
     content: "";
     position: absolute;
-    left: 0;
+    left: -10px;
     top: 2px;
     bottom: 2px;
     width: 3px;

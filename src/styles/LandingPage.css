@@ -118,6 +118,11 @@
 
 
 @media (min-width: 1024px) {
+    .hero {
+        padding: 60px 80px;
+        padding-bottom: 200px;
+
+    }
 
     .hero-image img {
         width: 420px;
@@ -152,7 +157,7 @@
 
     position: relative;
     padding-top: 200px;
-    padding-bottom: 100px;
+    padding-bottom: 150px;
 }
 
 /* Lớp SÓNG ở mép trên – full width */
@@ -162,12 +167,11 @@
     left: 0;
     top: -90px;
     /* đẩy lên khỏi content */
-    width: 100vw;
+    width: 100%;
     height: 90px;
     /* chỉnh theo tỉ lệ ảnh */
     background: url("../../public/images/bg-components/landing.svg") no-repeat center top;
     background-size: cover;
-    /* SVG/PNG tự căng đủ rộng */
     pointer-events: none;
     z-index: 0;
     transform: scaleX(-1);
@@ -180,6 +184,7 @@
     gap: 20px;
     align-items: center;
     justify-content: center;
+    padding-bottom: 70px;
 }
 
 .fp-section .f-item {
@@ -207,19 +212,9 @@
 /* < 744px: 2 item hàng đầu, item cuối xuống hàng và CĂN GIỮA */
 @media (max-width: 743px) {
     .fp-section .f-item {
-        flex: 1 1 calc(50% - 10px);
+        flex: 1 100%;
         /* 2 cột */
         min-width: 0;
-    }
-
-    .fp-section .f-item:last-child {
-        flex: 0 0 100%;
-        /* chiếm trọn 1 hàng */
-        display: flex;
-        justify-content: center;
-        /* căn giữa item cuối */
-        text-align: left;
-        /* tuỳ bạn muốn center cả text thì đổi thành center */
     }
 }
 
@@ -235,14 +230,14 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .hide-mobile {
+        display: none;
+    }
+
+}
 
 /* ==== PLAN BLOCK ==== */
-.fp-plan {
-    display: grid;
-    gap: 18px;
-    align-items: center;
-    padding: 20px 0 28px;
-}
 
 /* ảnh điện thoại */
 .plan-media {
@@ -264,9 +259,7 @@
 
 }
 
-.plan-text {
-    max-height: 320px;
-}
+
 
 /* text bên phải */
 .plan-text h2 {
@@ -329,23 +322,6 @@
 
 /* ====== Breakpoints theo 744/1024/1440 ====== */
 @media (min-width: 744px) {
-    .fp-plan {
-        grid-template-columns: .95fr 1.05fr;
-        /* trái ảnh – phải text */
-        gap: 24px;
-        padding: 28px 0 40px;
-        padding-bottom: 100px;
-    }
-
-    .phone-frame {
-        padding-bottom: 100px;
-    }
-
-    .phone-frame img {
-        height: 300px;
-
-
-    }
 
     .arrow {
         width: 140px;
@@ -415,20 +391,7 @@
     position: relative;
 }
 
-.fp-testimonials::before {
-    opacity: 0.7;
-    content: "";
-    position: absolute;
-    left: 0;
-    top: -400px;
-    width: 100%;
-    height: 200%;
-    background: url("../../public/images/bg-components/landing2.svg") no-repeat center top;
-    background-size: cover;
-    pointer-events: none;
-    z-index: 1;
 
-}
 
 .testimonial {
     position: relative;
@@ -514,22 +477,57 @@
     margin: 0;
 }
 
+@media(max-width:744px) {}
 
-@media (min-width: 744px) {}
+.fp-testimonials::before {
+    opacity: 0.7;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -50px;
+    width: 100%;
+    height: 350px;
 
-@media (min-width: 1024px) {}
+    background: url("../../public/images/bg-components/landing2.png") no-repeat center top;
+    background-size: cover;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@media (min-width: 744px) {
+
+    .fp-testimonials::before {
+        height: 400px;
+        top: -200px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .fp-testimonials::before {
+        height: 400px;
+        top: -250px;
+
+    }
+}
 
 @media (min-width: 1440px) {
     .testimonial .t-text {
         font-size: 14px;
     }
+
+    .fp-testimonials::before {
+        top: -300px;
+        height: 500px;
+
+    }
+
+
 }
 
 /* Ẩn card Jack khi màn nhỏ hơn 744px */
 @media (max-width: 744px) {
-    .hide-mobile {
-        display: none;
-    }
+
 
     .fp-testimonials {
         flex-direction: column;
@@ -664,9 +662,7 @@
     display: none;
 }
 
-.fp-section {
-    padding-bottom: 100px;
-}
+
 
 @media (min-width: 744px) {
     .faq-title {
@@ -692,6 +688,7 @@
     .download-btn {
         font-size: 20px;
     }
+
     .fp-section {
         padding-bottom: 200px;
     }
@@ -712,35 +709,27 @@
 
     .fp-plan {
         display: flex;
-        align-items: center;
+        align-items: top;
         justify-content: center;
         position: relative;
+        gap: 50px;
+    }
+
+    .plan-text {
+        padding-top: 80px
     }
 
     .plan-arrow {
         position: absolute;
-        top: 22%;
-        right: -48px;
-        width: 130px;
-        height: 20px;
-        background: url("../../public/images/arrow.png") no-repeat center;
-        background-size: contain;
-    }
-}
-
-@media (min-width: 1440px) {
-    .plan-arrow {
-        position: absolute;
-        top: 24%;
+        top: 30%;
         right: -40px;
         width: 130px;
         height: 20px;
         background: url("../../public/images/arrow.png") no-repeat center;
         background-size: contain;
     }
-}
 
-/*  */
+}
 
 
 

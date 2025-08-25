@@ -15,7 +15,7 @@
 }
 
 /* container đồng bộ 4 mốc */
-.custom-container {
+/* .custom-container {
     width: 100%;
     margin: 0 auto;
     padding: 0 16px;
@@ -41,7 +41,7 @@
         max-width: 1280px;
         padding: 0 32px;
     }
-}
+} */
 
 /* ===== HERO ===== */
 .pp-hero {
@@ -52,12 +52,12 @@
 
 /* media trái */
 .pp-hero-media {
-    border-radius: 16px;
     overflow: hidden;
+    text-align: center;
 }
 
 .pp-hero-media img {
-    width: 90%;
+    width: 100%;
     height: auto;
     display: block;
 }
@@ -288,4 +288,10 @@
     top: -100px;
     z-index: 0;
 
+}
+
+@media (max-width: 743.98px) {
+    .cloud-shop {
+        display: none;
+    }
 }

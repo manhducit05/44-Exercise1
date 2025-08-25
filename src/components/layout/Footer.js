@@ -94,7 +94,7 @@ export default function Footer() {
                     <div className="fcol subscribe">
                         <h5>Subscribe</h5>
                         <div className="sub-input">
-                            <input type="email" placeholder="Enter your email" />
+                            <input type="email" placeholder="Enter your email" name="emailInput" />
                             <button aria-label="Send">➤</button>
                         </div>
                         <p className="hint">

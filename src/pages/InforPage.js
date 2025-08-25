@@ -7,7 +7,7 @@ export default function Info() {
         <main className="info-root">
             {/* ===== Section 1: HERO IMAGE ===== */}
             <section className="info-hero">
-                <div className="info-container">
+                <div className="custom-container">
                     <img
                         src="/images/pc1.jpg"  /* Đặt ảnh tại public/images/info-hero.png */
                         alt="Juniper laptop preview"
@@ -70,7 +70,10 @@ export default function Info() {
                 <a href="/download" className="btn-download">DOWNLOAD NOW</a>
             </div>
             {/* ===== Section 3: SPECS CLOUDS ===== */}
-            <div className="specs-title custom-container">Spec’s clouds</div>
+            <div className="custom-container">
+                <div className="specs-title"> Spec’s clouds</div>
+
+            </div>
             <div className="cloud-element">
                 <div className="info-cloud">
                     <img src='/images/bg-components/wave-info.png' />

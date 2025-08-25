@@ -19,7 +19,6 @@
     text-align: center;
     padding: 18px 16px;
     color: var(--white);
-    filter: drop-shadow(var(--shadow));
 }
 
 .cloud-item p {
@@ -41,7 +40,11 @@
     font-size: 14px;
 }
 
-/* ===== Lưới (>=744px) ===== */
+.cloud-item.down {
+    margin-top: 100px !important;
+}
+
+/* ===== Lưới (>=1024px) ===== */
 .clouds-grid {
     display: grid;
     gap: 22px;
@@ -49,24 +52,22 @@
     justify-items: center;
 }
 
-/* 744–1023: 2x2 */
-@media (min-width:744px) and (max-width:1023.98px) {
-    .clouds-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 22px 28px;
+@media (min-width:1440px) {
+    .cloud-text {
+        font-size: 16px;
     }
 
     .cloud-item {
-        width: 100%;
-        min-width: 250px;
+        min-width: 400px;
     }
 
-    .cloud-item.down {
-        margin-top: 40px;
+    .cloud-icon {
+        height: 55px;
+        width: 55px;
     }
 }
 
-/* ===== Carousel (<744px) — 1 item/khung ===== */
+/* ===== CAROUSEL khung chung ===== */
 .clouds-carousel {
     position: relative;
     display: grid;
@@ -96,22 +97,21 @@
     width: 100%;
 }
 
-/* KHÔNG dùng gap ở track để tránh lệch; tạo khe bằng padding slide */
 .cloud-track {
     display: flex;
     gap: 0;
     transition: transform .35s ease;
 }
 
-/* Mỗi slide = 100% khung nhìn; padding tạo “khe” nhẹ 2 bên */
+/* ===== MOBILE (<744px): 1 item/slide ===== */
 .cloud-track>.slide {
     flex: 0 0 calc(100% / var(--per));
     /* var(--per)=1 */
     box-sizing: border-box;
     padding: 0 10px;
+    /* khe 2 bên */
 }
 
-/* Gọn chữ & card trên mobile */
 @media (max-width:743.98px) {
     .cloud-icon {
         font-size: 18px;
@@ -125,33 +125,104 @@
         width: 100%;
         min-width: 200px;
     }
-
-    /* bỏ ép min-width 350px */
 }
 
-/* 1024+ tinh chỉnh */
-@media (min-width:1024px) {
+/* ===== TABLET (744–1023.98px): 2 item/slide ===== */
+@media (min-width:744px) and (max-width:1023.98px) {
+
+    /* dùng carousel thay vì grid */
+    .clouds-carousel.tablet .cloud-track {
+        /* mỗi slide chiếm 100% viewport */
+    }
+
+    .clouds-carousel.tablet .slide {
+        flex: 0 0 100%;
+        box-sizing: border-box;
+        padding: 0 12px;
+    }
+
+    .slide-2col {
+        display: flex;
+        flex-direction: column;
+        /* 2 item xếp dọc như ảnh mẫu */
+        align-items: center;
+        gap: 36px;
+        /* khoảng cách giữa 2 item */
+        min-height: 420px;
+        /* đủ cao cho 2 mây */
+    }
+
+    .slide-2col .cloud-item {
+        width: 100%;
+        max-width: 420px;
+        /* co giãn vừa mắt tablet */
+    }
+
+    /* giảm độ lệch cho item .down trong tablet */
+    .slide-2col .cloud-item.down {
+        margin-top: 40px !important;
+    }
+}
+
+/* ===== 1024–1443.98px tinh chỉnh grid ===== */
+@media (min-width:1024px) and (max-width:1443.98px) {
+    .clouds-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px 28px;
+    }
+
     .cloud-item {
-        min-width: 400px;
+        width: 100%;
+        min-width: 250px;
+    }
+
+    .cloud-item.down {
+        margin-top: 0 !important;
     }
 }
 
-/* 1440+ tăng chữ 1 chút */
-@media (min-width:1440px) {
-    .cloud-text {
-        font-size: 16px;
+/* Tablet (744–1023.98px): mỗi slide chứa 2 item, xếp dọc như hình */
+@media (min-width:744px) and (max-width:1023.98px) {
+    .clouds-carousel.tablet .slide {
+        flex: 0 0 100%;
+        box-sizing: border-box;
+        padding: 0 12px;
+    }
+
+    .slide-2col {
+        display: flex;
+        flex-direction: column;
+        /* 2 item dọc */
+        align-items: center;
+        gap: 36px;
+        min-height: 420px;
+    }
+
+    .slide-2col .cloud-item {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .slide-2col .cloud-item.down {
+        margin-top: 40px !important;
     }
 
     .cloud-item {
-        min-width: 400px;
+        margin-right: 100px ;
     }
+    .cloud-item.down{
+        margin-right: 0px ;
+        margin-left: 100px;
 
-    .cloud-icon {
-        height: 55px;
-        width: 55px;
+
     }
 }
 
-.cloud-item i {
-    font-size: 65px;
+/* Mobile (<744px): 1 item/slide */
+@media (max-width:743.98px) {
+    .cloud-track>.slide {
+        flex: 0 0 100%;
+        box-sizing: border-box;
+        padding: 0 10px;
+    }
 }
