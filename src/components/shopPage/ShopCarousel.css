@@ -61,8 +61,8 @@
   .shop-carousel .nav {
     border: none;
     background: transparent;
-    font-size: 28px;
+    color: #F5B747;
+    font-size: 70px;
     cursor: pointer;
   }
-  .shop-carousel .nav:disabled { opacity: .3; }
 }

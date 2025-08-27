@@ -112,6 +112,10 @@
     /* khe 2 bên */
 }
 
+.cloud-element {
+    padding-bottom: 0;
+}
+
 @media (max-width:743.98px) {
     .cloud-icon {
         font-size: 18px;
@@ -162,6 +166,10 @@
     .slide-2col .cloud-item.down {
         margin-top: 40px !important;
     }
+
+    .cloud-element {
+        padding-bottom: 0;
+    }
 }
 
 /* ===== 1024–1443.98px tinh chỉnh grid ===== */
@@ -178,6 +186,10 @@
 
     .cloud-item.down {
         margin-top: 0 !important;
+    }
+
+    .cloud-element {
+        padding-bottom: 0;
     }
 }
 
@@ -208,10 +220,11 @@
     }
 
     .cloud-item {
-        margin-right: 100px ;
+        margin-right: 100px;
     }
-    .cloud-item.down{
-        margin-right: 0px ;
+
+    .cloud-item.down {
+        margin-right: 0px;
         margin-left: 100px;
 
 

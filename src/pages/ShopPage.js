@@ -2,7 +2,13 @@ import React from "react";
 import "../styles/ShopPage.css";
 import { Link } from "react-router-dom";
 import ShopCarousel from "../components/shopPage/ShopCarousel";
+import { useState } from "react";
+
 export default function ShopPage() {
+    const [flipped, setFlipped] = useState(false);
+    const flip = () => {
+        setFlipped(!flipped);
+    };
     return (
         <main className="product-page">
             <div className=" ">
@@ -42,7 +48,7 @@ export default function ShopPage() {
                 </section>
 
                 <section className="cloud-shop">
-                    <img src="/images/bg-components/shop.svg" />
+                    <img alt="cloud" src="/images/bg-components/shop.svg" />
                 </section>
 
                 <div className="btn-show text-center">
@@ -59,7 +65,9 @@ export default function ShopPage() {
                         </div>
                         <div className="text-btn">
                             <div className="btn-desc">YEARLY BILLING</div>
-                            <img src="/images/switchBtn.png" />
+                            <img alt="button select" src="/images/switchBtn.png" onClick={flip} style={{
+                                transform: flipped ? "scaleX(-1)" : "scaleX(1)",
+                            }} />
                             <div className="btn-desc">MONTHLY BILLING</div>
                         </div>
                     </div>

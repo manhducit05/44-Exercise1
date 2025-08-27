@@ -76,7 +76,7 @@ export default function Info() {
             </div>
             <div className="cloud-element">
                 <div className="info-cloud">
-                    <img src='/images/bg-components/wave-info.png' />
+                    <img alt="wave" src='/images/bg-components/wave-info.png' />
                 </div>
                 <div className="custom-container">
                     <CloudsCarousel />

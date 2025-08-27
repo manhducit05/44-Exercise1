@@ -6,7 +6,8 @@
 
 header {
     background-color: #D2982D;
-
+    padding-top: 10px;
+    padding-bottom: 18px;
 }
 
 /* Nền vàng cam cho header */
@@ -688,4 +689,14 @@ header {
     position: absolute;
     top: -100px;
     z-index: 0;
+}
+
+@media (min-width: 744px) and (max-width: 1023.98px) {
+    .footer-top {
+        flex-wrap: nowrap;
+    }
+
+    .fcol.subscribe {
+        margin-left: 200px;
+    }
 }

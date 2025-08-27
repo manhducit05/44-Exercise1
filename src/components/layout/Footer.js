@@ -14,23 +14,23 @@ export default function Footer() {
             <div className=" footer-dec left"></div>
             <div className="footer-dec right"></div>
             <div className="footer-cloud">
-                <img src="/images/bg-components/footer.png" />
+                <img src="/images/bg-components/footer.png" alt="cloud" />
             </div>
             <div className="footer-top custom-container">
                 {/* Social (cột trái) */}
                 <ul className="social">
                     <li>
-                        <a href="#" aria-label="Twitter">
+                        <a href="https://x.com/?lang=vi" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon icon={faTwitter} />
                         </a>
                     </li>
                     <li>
-                        <a href="#" aria-label="Facebook">
+                        <a href="https://www.facebook.com/" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon icon={faFacebook} />
                         </a>
                     </li>
                     <li>
-                        <a href="#" aria-label="Instagram">
+                        <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
                             <FontAwesomeIcon icon={faInstagram} />
                         </a>
                     </li>
