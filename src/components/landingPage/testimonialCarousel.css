@@ -26,10 +26,6 @@
     transition: opacity .2s ease, transform .2s ease;
 }
 
-.t-arrow:hover {
-    opacity: 1;
-    transform: translateY(-50%) scale(1.05);
-}
 
 .t-prev {
     left: -50px;
@@ -91,6 +87,39 @@
 @media (max-width: 743.98px) {
     .testimonial-card {
         width: 332px;
+    }
+
+    .t-arrow {
+        position: absolute;
+        left: 50%;
+        /* canh giữa theo chiều ngang */
+        transform: translateX(-50%);
+        /* đưa đúng giữa */
+        border: 0;
+        background: transparent;
+        font-size: 56px;
+        line-height: 1;
+        color: #F5B747;
+        cursor: pointer;
+        padding: 8px 0;
+        transition: opacity .2s ease, transform .2s ease;
+    }
+
+
+    .t-prev {
+        top: -60px;
+        transform: translateX(-50%) rotate(90deg);
+        /* ← xoay thành ↑ */
+
+        /* mũi tên lên trên */
+    }
+
+    .t-next {
+        bottom: -160px;
+        transform: translateX(-50%) rotate(90deg);
+        /* → xoay thành ↓ */
+
+        /* mũi tên xuống dưới */
     }
 }
 

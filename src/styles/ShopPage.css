@@ -149,6 +149,10 @@
         text-align: center;
     }
 
+    .pp-cta {
+        justify-content: center;
+    }
+
 }
 
 /* Laptop 1024–1439px */

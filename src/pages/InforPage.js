@@ -3,6 +3,18 @@ import "../styles/InfoPage.css";
 import CloudsCarousel from "../components/infoPage/CloudCarousel";
 
 export default function Info() {
+
+    const PDF_PATH = "/files/INFOPage.pdf";     // đổi thành đường dẫn file của bạn
+    const FILE_NAME = "InfoPage.pdf";            // tên gợi ý khi tải về
+
+    const handleDownload = () => {
+        const a = document.createElement("a");
+        a.href = PDF_PATH;        // cùng origin → trình duyệt cho phép tải trực tiếp
+        a.download = FILE_NAME;   // gợi ý tên file
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+    };
     return (
         <main className="info-root">
             {/* ===== Section 1: HERO IMAGE ===== */}
@@ -67,7 +79,14 @@ export default function Info() {
             </section>
 
             <div className="compare-cta">
-                <a href="/download" className="btn-download">DOWNLOAD NOW</a>
+                <button
+                    className="btn-download"
+                    type="button"
+                    onClick={handleDownload}
+                    aria-label="Download PDF"
+                >
+                    DOWNLOAD NOW
+                </button>
             </div>
             {/* ===== Section 3: SPECS CLOUDS ===== */}
             <div className="custom-container">

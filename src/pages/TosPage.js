@@ -1,8 +1,5 @@
 import React from "react";
 import "../styles/TosPage.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLock } from "@fortawesome/free-solid-svg-icons";
-
 export default function TosPage() {
     return (
         <main className="tos-page">

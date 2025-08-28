@@ -6,19 +6,19 @@ export default function LandingPage() {
     const faqs = [
         {
             q: "How can I customize the Juniper app to suit my needs?",
-            a: "Bạn có thể tùy chỉnh notification, theme, widget theo địa điểm ưa thích."
+            a: "You can personalize the Juniper app by adjusting the settings in the “Preferences” or “Profile” section. There you’ll find options to choose your preferred units (e.g., Celsius or Fahrenheit), set location-based weather alerts, and organize your dashboard to show only the features most useful to you."
         },
         {
             q: "How can I share my weather updates with my partner?",
-            a: "Dùng share card hoặc mời vào shared location list để nhận cảnh báo chung."
+            a: "The app allows you to share updates directly through the “Share” button available on most weather reports. You can send updates via email, text, or messaging apps. Alternatively, you can invite your partner to connect their account with yours, so they automatically receive updates from your profile."
         },
         {
             q: "How long is the free trial for the Juniper app?",
-            a: "Dùng thử X ngày, không cần thẻ (cập nhật giá trị thật của bạn)."
+            a: "The free trial lasts for 14 days. During this period, you have access to all premium features without restrictions. Once the trial ends, you can either switch to a paid subscription to continue using premium features or revert to the basic free version."
         },
         {
             q: "What happens after the free trial ends?",
-            a: "Chuyển gói Free/Basic hoặc nâng cấp Pro."
+            a: "Once your free trial is over, your account will automatically switch to the basic free plan unless you subscribe. You’ll still be able to check standard forecasts, but advanced features such as detailed alerts, extended forecasts, or partner sharing may be restricted until you upgrade to a paid plan."
         },
     ];
 

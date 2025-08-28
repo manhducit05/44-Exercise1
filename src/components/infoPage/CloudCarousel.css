@@ -6,19 +6,22 @@
 /* ===== Card dùng background ảnh ===== */
 .cloud-item {
     position: relative;
-    width: 360px;
+    width: 270px;
+    height: 270px;
     max-width: 100%;
-    aspect-ratio: 4/3;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     text-align: center;
-    padding: 18px 16px;
     color: var(--white);
+}
+
+.second-cloud {
+    padding-left: 90px;
 }
 
 .cloud-item p {
@@ -61,10 +64,6 @@
         min-width: 400px;
     }
 
-    .cloud-icon {
-        height: 55px;
-        width: 55px;
-    }
 }
 
 /* ===== CAROUSEL khung chung ===== */
@@ -129,16 +128,16 @@
         width: 100%;
         min-width: 200px;
     }
+
+    .cloud-item.down {
+        margin-top: 0 !important;
+    }
 }
 
 /* ===== TABLET (744–1023.98px): 2 item/slide ===== */
 @media (min-width:744px) and (max-width:1023.98px) {
 
     /* dùng carousel thay vì grid */
-    .clouds-carousel.tablet .cloud-track {
-        /* mỗi slide chiếm 100% viewport */
-    }
-
     .clouds-carousel.tablet .slide {
         flex: 0 0 100%;
         box-sizing: border-box;
@@ -159,7 +158,7 @@
     .slide-2col .cloud-item {
         width: 100%;
         max-width: 420px;
-        /* co giãn vừa mắt tablet */
+        padding-left: 75px;
     }
 
     /* giảm độ lệch cho item .down trong tablet */
@@ -170,6 +169,12 @@
     .cloud-element {
         padding-bottom: 0;
     }
+
+    .cloud-item {
+        width: 100%;
+        min-width: 250px;
+        justify-content: center;
+    }
 }
 
 /* ===== 1024–1443.98px tinh chỉnh grid ===== */
@@ -179,18 +184,19 @@
         gap: 22px 28px;
     }
 
-    .cloud-item {
-        width: 100%;
-        min-width: 250px;
-    }
+
 
     .cloud-item.down {
         margin-top: 0 !important;
     }
 
-    .cloud-element {
-        padding-bottom: 0;
+
+    .cloud-item {
+        width: 100%;
+        min-width: 250px;
+        justify-content: center;
     }
+
 }
 
 /* Tablet (744–1023.98px): mỗi slide chứa 2 item, xếp dọc như hình */
@@ -226,8 +232,6 @@
     .cloud-item.down {
         margin-right: 0px;
         margin-left: 100px;
-
-
     }
 }
 

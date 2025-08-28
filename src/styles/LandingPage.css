@@ -414,6 +414,13 @@
     .fp-features {
         flex-direction: column;
     }
+    .f-item{
+        text-align: center;
+    }
+    .f-item .d-flex{
+        justify-content: center;
+    }
+
 }
 
 /* Tablet 744–1023px */
@@ -750,9 +757,6 @@ a {
 .faq-answer.collapsing {
     text-align: left;
 }
-
-
-
 
 
 /* Gọn gàng khoảng cách trong phần trả lời */

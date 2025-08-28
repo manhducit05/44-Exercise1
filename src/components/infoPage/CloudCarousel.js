@@ -4,7 +4,7 @@ import "./CloudCarousel.css";
 /* data */
 const CLOUD_ITEMS = [
     {
-        img: "/images/cloud.jpg", icon: "/images/icon.svg",
+        img: "/images/cloud.png", icon: "/images/icon.svg",
         text: "Accurate and reliable weather forecasts powered by cloud computing"
     },
     {
@@ -41,7 +41,6 @@ export default function CloudsCarousel() {
     }, []);
 
     // derive chế độ hiển thị từ vw
-    const isMobile = vw < 744;
     const isTablet = vw >= 744 && vw < 1024;
     const isGrid = vw >= 1024;
     const isCarousel = !isGrid;
@@ -65,22 +64,22 @@ export default function CloudsCarousel() {
 
     const next = () => setIndex((v) => Math.min(maxIndex, v + 1));
     const prev = () => setIndex((v) => Math.max(0, v - 1));
-
     // ===== render grid (>=1024) =====
     if (isGrid) {
         return (
             <div className="clouds-grid">
-                {CLOUD_ITEMS.map((it, i) => (
-                    <article
-                        key={i}
-                        className={`cloud-item ${it.down ? "down" : ""}`}
-                        style={{ backgroundImage: `url(${it.img})` }}
-                        aria-label={it.text}
-                    >
-                        <img src={it.icon} alt="icon" className="cloud-icon" />
-                        <p className="cloud-text">{it.text}</p>
-                    </article>
-                ))}
+                {CLOUD_ITEMS.map((it, i) => {
+
+                    return (
+                        <article
+                            key={i} // (nếu có id ổn định thì dùng id thay vì i)
+                            className={`cloud-item ${it.down ? "down" : ""}`}
+                            style={{ backgroundImage: `url(${it.img})` }}
+                            aria-label={it.text}
+                        >
+                        </article>
+                    );
+                })}
             </div>
         );
     }
@@ -113,8 +112,6 @@ export default function CloudsCarousel() {
                                     style={{ backgroundImage: `url(${it.img})` }}
                                     aria-label={it.text}
                                 >
-                                    <img src={it.icon} alt="icon" className="cloud-icon" />
-                                    <p className="cloud-text">{it.text}</p>
                                 </article>
                             ))}
                         </div>
