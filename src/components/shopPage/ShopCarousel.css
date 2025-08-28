@@ -1,4 +1,6 @@
-.shop-carousel-sec { padding: 20px 0; }
+.shop-carousel-sec {
+  padding: 20px 0;
+}
 
 /* Grid ≥1024px (giữ nguyên) */
 .shop-grid {
@@ -6,12 +8,14 @@
   justify-content: center;
   gap: 16px;
 }
+
 .shop-card {
   border-radius: 12px;
   overflow: hidden;
   max-width: 280px;
   flex: 0 0 auto;
 }
+
 .shop-card img {
   width: 100%;
   max-height: 450px;
@@ -20,15 +24,24 @@
   display: block;
 }
 
+
+
 /* Carousel <1024px */
 @media (max-width: 1023.98px) {
   .shop-carousel {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto 300px auto;
+    justify-content: center;
+    /* căn giữa toàn bộ */
+
     align-items: center;
     gap: 10px;
   }
-  .shop-carousel .viewport { overflow: hidden; }
+
+  .shop-carousel .viewport {
+    overflow: hidden;
+  }
+
   .shop-carousel .track {
     display: flex;
     transition: transform 0.35s ease;
@@ -37,24 +50,30 @@
   /* mỗi slide = 100% viewport */
   .shop-carousel .slide {
     flex: 0 0 100%;
-    display: flex;            /* để căn giữa card */
+    display: flex;
+    /* để căn giữa card */
     justify-content: center;
     align-items: center;
-    padding: 0 10px;          /* khe 2 bên */
+    padding: 0 10px;
+    /* khe 2 bên */
     box-sizing: border-box;
   }
 
   /* đồng nhất kích thước card trong carousel */
   .shop-carousel .slide .shop-card {
-    width: 280px;             /* bạn có thể đổi 260–320 */
-    height: 460px;            /* giữ tỷ lệ & độ cao đồng đều */
+    width: 280px;
+    /* bạn có thể đổi 260–320 */
+    height: 460px;
+    /* giữ tỷ lệ & độ cao đồng đều */
     border-radius: 12px;
     overflow: hidden;
   }
+
   .shop-carousel .slide .shop-card img {
     width: 100%;
     height: 100%;
-    object-fit: contain;      /* không méo ảnh */
+    object-fit: contain;
+    /* không méo ảnh */
     display: block;
   }
 
