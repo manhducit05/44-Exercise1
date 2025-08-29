@@ -1,151 +1,164 @@
 .two-col {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
 }
 
 @media (min-width: 992px) {
-    .fp-testimonials.two-col {
-        grid-template-columns: 1fr 1fr;
-    }
+  .fp-testimonials.two-col {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 
 .t-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  background: transparent;
+  font-size: 56px;
+  line-height: 1;
+  color: #F5B747;
+  cursor: pointer;
+  padding: 0 8px;
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+
+.t-prev {
+  left: -50px;
+}
+
+.t-next {
+  right: -50px;
+}
+
+
+
+
+.t-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.t-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.t-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #888;
+  opacity: .6;
+}
+
+.t-dot.is-active {
+  opacity: 1;
+  background: #F5B747;
+}
+
+
+.testimonial-card {
+  position: relative;
+  background: #2b2735;
+  color: #fff;
+  border-radius: 14px;
+  padding: 25px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .25);
+  min-height: 220px;
+}
+
+.t-user {
+  position: absolute;
+  bottom: 10px;
+}
+
+.t-slide {
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+
+.avt-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* Mobile ≤ 743px (base 375) */
+@media (max-width: 743.98px) {
+  .testimonial-card {
+    width: 332px;
+  }
+
+  .t-arrow {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    left: 50%;
+    /* canh giữa theo chiều ngang */
+    transform: translateX(-50%);
+    /* đưa đúng giữa */
     border: 0;
     background: transparent;
     font-size: 56px;
     line-height: 1;
     color: #F5B747;
     cursor: pointer;
-    padding: 0 8px;
+    padding: 8px 0;
     transition: opacity .2s ease, transform .2s ease;
-}
+  }
 
 
-.t-prev {
-    left: -50px;
-}
+  .t-prev {
+    top: -60px;
+    transform: translateX(-50%) rotate(90deg);
+    /* ← xoay thành ↑ */
 
-.t-next {
-    right: -50px;
-}
+    /* mũi tên lên trên */
+  }
 
-.t-user {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-top: 16px;
-}
+  .t-next {
+    bottom: -160px;
+    transform: translateX(-50%) rotate(90deg);
+    /* → xoay thành ↓ */
 
-.t-avatar {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.t-dots {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 10px;
-    display: flex;
-    gap: 6px;
-    justify-content: center;
-}
-
-.t-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #888;
-    opacity: .6;
-}
-
-.t-dot.is-active {
-    opacity: 1;
-    background: #F5B747;
-}
-
-
-.testimonial-card {
-    position: relative;
-    background: #2b2735;
-    color: #fff;
-    border-radius: 14px;
-    padding: 25px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, .25);
-    min-height: 220px;
-}
-
-/* Mobile ≤ 743px (base 375) */
-@media (max-width: 743.98px) {
-    .testimonial-card {
-        width: 332px;
-    }
-
-    .t-arrow {
-        position: absolute;
-        left: 50%;
-        /* canh giữa theo chiều ngang */
-        transform: translateX(-50%);
-        /* đưa đúng giữa */
-        border: 0;
-        background: transparent;
-        font-size: 56px;
-        line-height: 1;
-        color: #F5B747;
-        cursor: pointer;
-        padding: 8px 0;
-        transition: opacity .2s ease, transform .2s ease;
-    }
-
-
-    .t-prev {
-        top: -60px;
-        transform: translateX(-50%) rotate(90deg);
-        /* ← xoay thành ↑ */
-
-        /* mũi tên lên trên */
-    }
-
-    .t-next {
-        bottom: -160px;
-        transform: translateX(-50%) rotate(90deg);
-        /* → xoay thành ↓ */
-
-        /* mũi tên xuống dưới */
-    }
+    /* mũi tên xuống dưới */
+  }
 }
 
 /* Tablet 744–1023px */
 @media (min-width: 744px) and (max-width: 1023.98px) {
-    .testimonial-card {
-        width: 332px;
-    }
+  .testimonial-card {
+    width: 332px;
+  }
 }
 
 /* Laptop 1024–1439px */
 @media (min-width: 1024px) and (max-width: 1439.98px) {
-    .testimonial-card {
-        width: 350px;
-    }
+  .testimonial-card {
+    width: 350px;
+  }
 }
 
 /* Desktop ≥ 1440px */
 @media (min-width: 1440px) {
-    .testimonial-card {
-        width: 460px;
-    }
+  .testimonial-card {
+    width: 460px;
+  }
 }
 
 @media(max-width: 1023.98px) {
-    .hide {
-        display: none;
-    }
+  .hide {
+    display: none;
+  }
 }

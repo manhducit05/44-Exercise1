@@ -7,7 +7,7 @@ const PLANS = [
   { id: 3, url: "/images/card3.png" },
 ];
 
-export default function ShopCarousel() {
+const ShopCarousel = () => {
   const [vw, setVw] = useState(
     typeof window !== "undefined" ? window.innerWidth : 1440
   );
@@ -85,3 +85,4 @@ export default function ShopCarousel() {
     </section>
   );
 }
+export default ShopCarousel;

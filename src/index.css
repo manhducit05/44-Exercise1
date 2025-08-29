@@ -20,3 +20,17 @@ code {
   font-family: 'Inter', sans-serif;
   box-sizing: border-box;
 }
+/* Đổi màu title */
+.ant-skeleton .ant-skeleton-content .ant-skeleton-title {
+  background-color: #e0a63d !important; /* vàng cam đậm hơn nền */
+}
+
+/* Đổi màu các dòng paragraph */
+.ant-skeleton .ant-skeleton-content .ant-skeleton-paragraph > li {
+  background-color: #f2c54d !important; /* vàng sáng hơn để nổi bật */
+}
+
+/* Nếu có avatar trong skeleton */
+.ant-skeleton .ant-skeleton-avatar {
+  background-color: #cc8f2d !important;
+}
