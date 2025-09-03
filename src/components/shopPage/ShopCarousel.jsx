@@ -1,17 +1,56 @@
 import React, { useMemo, useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import "./ShopCarousel.css";
 
 const PLANS = [
-  { id: 1, url: "/images/card1.png" },
-  { id: 2, url: "/images/card2.png" },
-  { id: 3, url: "/images/card3.png" },
+  {
+    id: 1,
+    titleKey: "plans.free.title",
+    priceKey: "plans.free.price",
+    featuresKey: [
+      "plans.free.f1",
+      "plans.free.f2",
+      "plans.free.f3",
+      "plans.free.f4",
+    ],
+    bg: "/images/left.png",
+  },
+  {
+    id: 2,
+    titleKey: "plans.couple.title",
+    priceKey: "plans.couple.price",
+    featuresKey: [
+      "plans.couple.f1",
+      "plans.couple.f2",
+      "plans.couple.f3",
+      "plans.couple.f4",
+      "plans.couple.f5",
+      "plans.couple.f6",
+    ],
+    bg: "/images/centre.png",
+  },
+  {
+    id: 3,
+    titleKey: "plans.pro.title",
+    priceKey: "plans.pro.price",
+    featuresKey: [
+      "plans.pro.f1",
+      "plans.pro.f2",
+      "plans.pro.f3",
+      "plans.pro.f4",
+      "plans.pro.f5",
+    ],
+    bg: "/images/left.png",
+  },
 ];
 
 const ShopCarousel = () => {
+  const { t } = useTranslation("shopCarousel");
+
   const [vw, setVw] = useState(
     typeof window !== "undefined" ? window.innerWidth : 1440
   );
-  const isCarousel = vw < 1024; // 👈 đổi breakpoint
+  const isCarousel = vw < 1024;
 
   useEffect(() => {
     const onR = () => setVw(window.innerWidth);
@@ -19,12 +58,9 @@ const ShopCarousel = () => {
     return () => window.removeEventListener("resize", onR);
   }, []);
 
-  // Carousel state
-  const [index, setIndex] = useState(1); // mặc định giữa
+  const [index, setIndex] = useState(1);
   useEffect(() => {
-    // khi về grid (>=1024) thì reset về 0
     if (!isCarousel) setIndex(0);
-    // khi chuyển sang carousel mà index vượt max, cũng clamp
     else setIndex((v) => Math.min(v, PLANS.length - 1));
   }, [isCarousel]);
 
@@ -38,8 +74,25 @@ const ShopCarousel = () => {
       {!isCarousel && (
         <div className="shop-grid">
           {PLANS.map((p) => (
-            <div key={p.id} className="shop-card">
-              <img src={p.url} alt={`card-${p.id}`} />
+            <div
+              key={p.id}
+              className={`shop-card plan-${p.id}`}   // 👈 thêm class riêng
+              style={{ backgroundImage: `url(${p.bg})` }}
+            >
+              <div className="head">
+                <div className="plan-title">{t(p.titleKey)}</div>
+                <p className="plan-price">{t(p.priceKey)}</p>
+              </div>
+              <div className="main">
+                <ul className="plan-features">
+                  {p.featuresKey.map((f, i) => (
+                    <li key={i}>{t(f)}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="button">
+                <button className="subscribe-btn">{t("plans.button")}</button>
+              </div>
             </div>
           ))}
         </div>
@@ -64,8 +117,24 @@ const ShopCarousel = () => {
             >
               {PLANS.map((p) => (
                 <div key={p.id} className="slide">
-                  <div className="shop-card">
-                    <img src={p.url} alt={`card-${p.id}`} />
+                  <div
+                    className={`shop-card plan-${p.id}`}
+                    style={{ backgroundImage: `url(${p.bg})` }}
+                  >
+                    <div className="head">
+                      <div className="plan-title">{t(p.titleKey)}</div>
+                      <p className="plan-price">{t(p.priceKey)}</p>
+                    </div>
+                    <div className="main">
+                      <ul className="plan-features">
+                        {p.featuresKey.map((f, i) => (
+                          <li key={i}>{t(f)}</li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="button">
+                      <button className="subscribe-btn">{t("plans.button")}</button>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -84,5 +153,6 @@ const ShopCarousel = () => {
       )}
     </section>
   );
-}
+};
+
 export default ShopCarousel;

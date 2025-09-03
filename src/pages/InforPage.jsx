@@ -1,47 +1,13 @@
 import React from "react";
 import "../styles/InfoPage.css";
 import CloudsCarousel from "../components/infoPage/CloudCarousel";
+import { useTranslation } from "react-i18next";
 
 const Info = () => {
+  const { t } = useTranslation("info");
 
-  // table array
-  const compareData = [
-    {
-      key: "Cloud Technology",
-      left: "Cloud technology for reliable forecasts",
-      right: "Other apps use outdated data sources",
-    },
-    {
-      key: "Simple Interface",
-      left: "Simple and intuitive interface",
-      right: "Other apps have cluttered design",
-    },
-    {
-      key: "10-Day Forecast",
-      left: "10-day forecast with hourly updates",
-      right: "Other apps offer 7-day forecast or less",
-    },
-    {
-      key: "Weather Alerts",
-      left: "Severe weather alerts and notifications",
-      right: "Other apps do not warn of hazards",
-    },
-    {
-      key: "Air Quality Data",
-      left: "Air quality information and maps",
-      right: "Other apps do not include air quality data",
-    },
-    {
-      key: "Weather Maps",
-      left: "Temperature and precipitation maps",
-      right: "Other apps do not show global patterns",
-    },
-    {
-      key: "Affordable Price",
-      left: "Inexpensive and affordable",
-      right: "Other apps charge premium prices or fees",
-    },
-  ];
+  // lấy dữ liệu bảng từ file JSON
+  const compareData = t("compare.rows", { returnObjects: true });
 
   // download 
   const PDF_PATH = "/files/INFOPage.pdf";
@@ -55,6 +21,7 @@ const Info = () => {
     a.click();
     a.remove();
   };
+
   return (
     <main className="info-root">
       {/* ===== Section 1: HERO IMAGE ===== */}
@@ -67,14 +34,15 @@ const Info = () => {
           />
         </div>
       </section>
+
       {/* ===== Section 2: COMPARISON ===== */}
       <section className="info-compare">
         <div className="info-container">
           <div className="compare-card">
             <div className="compare-head">
               <div className="col name blank" />
-              <div className="col name left">JUNIPER</div>
-              <div className="col name right">OTHER COMPANY</div>
+              <div className="col name left">{t("compare.juniper")}</div>
+              <div className="col name right">{t("compare.other")}</div>
             </div>
             {compareData.map((item, index) => (
               <div className="compare-row" key={index}>
@@ -94,24 +62,27 @@ const Info = () => {
           onClick={handleDownload}
           aria-label="Download PDF"
         >
-          DOWNLOAD NOW
+          {t("download")}
         </button>
       </div>
+
       {/* ===== Section 3: SPECS CLOUDS ===== */}
       <div className="custom-container">
-        <div className="specs-title"> Spec’s clouds</div>
-
+        <div className="specs-title">{t("specsTitle")}</div>
       </div>
+
       <div className="cloud-element">
         <div className="info-cloud">
-          <img alt="wave" src='/images/bg-components/wave-info.png' />
+          <img alt="wave" src="/images/bg-components/wave-info.png" />
         </div>
         <div className="custom-container">
           <CloudsCarousel />
         </div>
       </div>
+
       <div className="info-bottom"></div>
     </main>
   );
-}
+};
+
 export default Info;

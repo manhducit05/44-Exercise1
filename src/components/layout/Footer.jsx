@@ -7,7 +7,12 @@ import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
+// i18n
+import { useTranslation } from "react-i18next";
+
 const Footer = () => {
+  const { t } = useTranslation("footer");
+
   return (
     <footer className="site-footer">
 
@@ -39,58 +44,56 @@ const Footer = () => {
         {/* Lưới cột nội dung */}
         <div className="footer-cols">
           <div className="fcol">
-            <h5>Pages</h5>
+            <h5>{t("pages.title")}</h5>
             <ul>
               <li>
                 <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")} end>
-                  Home
+                  {t("pages.home")}
                 </NavLink>
               </li>
               <li>
                 <NavLink to="/info" className={({ isActive }) => (isActive ? "active" : "")}>
-                  Info
+                  {t("pages.info")}
                 </NavLink>
               </li>
               <li>
                 <NavLink to="/shop" className={({ isActive }) => (isActive ? "active" : "")}>
-                  Shop
+                  {t("pages.shop")}
                 </NavLink>
               </li>
               <li>
                 <NavLink to="/tos" className={({ isActive }) => (isActive ? "active" : "")}>
-                  TOS
+                  {t("pages.tos")}
                 </NavLink>
               </li>
             </ul>
           </div>
 
           <div className="fcol">
-            <h5>Platform</h5>
+            <h5>{t("platform.title")}</h5>
             <ul>
-              <li>Android</li>
-              <li>iOS</li>
-              <li>Windows</li>
-              <li>Mac OS</li>
+              <li>{t("platform.android")}</li>
+              <li>{t("platform.ios")}</li>
+              <li>{t("platform.windows")}</li>
+              <li>{t("platform.macos")}</li>
             </ul>
           </div>
 
           <div className="fcol">
-            <h5>Support</h5>
+            <h5>{t("support.title")}</h5>
             <ul>
-              <li>Support request</li>
-              <li>Contact Us</li>
+              <li>{t("support.request")}</li>
+              <li>{t("support.contact")}</li>
             </ul>
           </div>
 
           <div className="fcol subscribe">
-            <h5>Subscribe</h5>
+            <h5>{t("subscribe.title")}</h5>
             <div className="sub-input">
-              <input type="email" placeholder="Enter your email" name="emailInput" />
+              <input type="email" placeholder={t("subscribe.placeholder")} name="emailInput" />
               <button aria-label="Send">➤</button>
             </div>
-            <p className="hint">
-              Join our newsletter to stay up to date on features and releases.
-            </p>
+            <p className="hint">{t("subscribe.hint")}</p>
           </div>
         </div>
       </div>
@@ -99,9 +102,9 @@ const Footer = () => {
 
       <div className="footer-bottom custom-container">
         <div className="brand">JUNIPER</div>
-        <button className="getnow">GET NOW</button>
+        <button className="getnow">{t("getNow")}</button>
       </div>
     </footer>
   );
-}
+};
 export default Footer;

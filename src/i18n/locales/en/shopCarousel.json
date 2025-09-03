@@ -1,0 +1,32 @@
+{
+  "plans": {
+    "free": {
+      "title": "FREE",
+      "price": "$0.00",
+      "f1": "Basic weather info for your location",
+      "f2": "Share with one partner",
+      "f3": "Daily and hourly forecasts",
+      "f4": "Beautiful and intuitive interface"
+    },
+    "couple": {
+      "title": "COUPLE",
+      "price": "$2.49",
+      "f1": "Advanced weather info for any location",
+      "f2": "Share with up to five partners",
+      "f3": "Weekly and monthly forecasts",
+      "f4": "Customizable themes and widgets",
+      "f5": "Weather groups, stickers, emoji, and gifs",
+      "f6": "Exclusive blog and podcast"
+    },
+    "pro": {
+      "title": "PRO",
+      "price": "$4.99",
+      "f1": "Exclusive weather info from our cloud technology",
+      "f2": "Share with unlimited partners",
+      "f3": "Personalized forecasts based on your preferences and activities",
+      "f4": "Weather trends, alerts, and recommendations",
+      "f5": "Special features and rewards"
+    },
+    "button": "SUBSCRIBE"
+  }
+}

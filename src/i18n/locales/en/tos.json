@@ -1,0 +1,48 @@
+{
+  "title": "Terms Of Service",
+  "intro": "Welcome to Juniper, the app that lets you check the weather with innovative software and an easy to use interface. By using our app, you agree to these terms of service. Please read them carefully.",
+  "license": {
+    "title": "License",
+    "content": "We grant you a limited, non-exclusive, non-transferable, and revocable license to use our app for your personal, non-commercial use only. You may not copy, modify, distribute, sell, or lease any part of our app or its content, nor may you reverse engineer or attempt to extract the source code of our app, unless you have our written permission."
+  },
+  "privacy": {
+    "title": "Privacy",
+    "content": "We respect your privacy and are committed to protecting it. Our privacy policy explains how we collect, use, and share your personal information when you use our app. By using our app, you consent to our privacy policy."
+  },
+  "content": {
+    "title": "Content",
+    "content": "You are responsible for any content that you upload, post, or share on or through our app, such as photos, videos, comments, or ratings. You must have the right to use such content and not infringe, violate, or misappropriate the rights of any third party. We may remove or disable access to any content that we deem unlawful or inappropriate."
+  },
+  "acceptableUse": {
+    "title": "Acceptable Use",
+    "rules": [
+      "No unlawful, harmful, or fraudulent activities.",
+      "No attempts to gain unauthorized access or disrupt service.",
+      "No misuse of our trademarks, branding, or UI elements."
+    ]
+  },
+  "billing": {
+    "title": "Subscriptions & Billing",
+    "content": "Some features may require a paid plan. Payments are processed by our authorized provider. Subscriptions auto-renew unless canceled at least 24 hours before the end of the current period in your app store account settings."
+  },
+  "disclaimers": {
+    "title": "Disclaimers",
+    "content": "The app is provided 'as is' without warranties of any kind. We do not guarantee that the service will be uninterrupted, secure, or error-free, or that weather data will be accurate at all times."
+  },
+  "liability": {
+    "title": "Limitation of Liability",
+    "content": "To the maximum extent permitted by law, Juniper and its affiliates will not be liable for any indirect, incidental, special, or consequential damages arising from your use of the app."
+  },
+  "termination": {
+    "title": "Termination",
+    "content": "We may suspend or terminate access to the app at any time if you violate these terms. Upon termination, your license to use the app ends immediately."
+  },
+  "changes": {
+    "title": "Changes to the Terms",
+    "content": "We may update these terms from time to time. Continued use of the app after changes indicates your acceptance of the updated terms."
+  },
+  "contact": {
+    "title": "Contact",
+    "content": "If you have questions about these terms, please contact support via the Info page."
+  }
+}

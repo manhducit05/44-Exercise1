@@ -1,0 +1,48 @@
+{
+  "title": "Điều Khoản Dịch Vụ",
+  "intro": "Chào mừng bạn đến với Juniper, ứng dụng giúp bạn xem thời tiết với phần mềm hiện đại và giao diện dễ sử dụng. Khi sử dụng ứng dụng, bạn đồng ý với các điều khoản sau. Vui lòng đọc kỹ.",
+  "license": {
+    "title": "Giấy Phép",
+    "content": "Chúng tôi cấp cho bạn giấy phép giới hạn, không độc quyền, không thể chuyển nhượng và có thể thu hồi để sử dụng ứng dụng cho mục đích cá nhân, phi thương mại. Bạn không được sao chép, chỉnh sửa, phân phối, bán hoặc cho thuê bất kỳ phần nào của ứng dụng, cũng như không được dịch ngược hoặc tìm cách trích xuất mã nguồn trừ khi có sự cho phép bằng văn bản từ chúng tôi."
+  },
+  "privacy": {
+    "title": "Quyền Riêng Tư",
+    "content": "Chúng tôi tôn trọng quyền riêng tư của bạn và cam kết bảo vệ nó. Chính sách quyền riêng tư giải thích cách chúng tôi thu thập, sử dụng và chia sẻ thông tin cá nhân của bạn khi dùng ứng dụng. Khi sử dụng ứng dụng, bạn đồng ý với chính sách này."
+  },
+  "content": {
+    "title": "Nội Dung",
+    "content": "Bạn chịu trách nhiệm với mọi nội dung tải lên, đăng hoặc chia sẻ trên ứng dụng như ảnh, video, bình luận hoặc đánh giá. Bạn phải có quyền sử dụng nội dung đó và không được vi phạm quyền của bên thứ ba. Chúng tôi có thể gỡ bỏ hoặc vô hiệu nội dung mà chúng tôi cho là bất hợp pháp hoặc không phù hợp."
+  },
+  "acceptableUse": {
+    "title": "Sử Dụng Hợp Lý",
+    "rules": [
+      "Không thực hiện hành vi bất hợp pháp, gây hại hoặc gian lận.",
+      "Không tìm cách truy cập trái phép hoặc gây gián đoạn dịch vụ.",
+      "Không lạm dụng thương hiệu, nhãn hiệu hoặc giao diện của chúng tôi."
+    ]
+  },
+  "billing": {
+    "title": "Gói Dịch Vụ & Thanh Toán",
+    "content": "Một số tính năng có thể yêu cầu gói trả phí. Thanh toán được xử lý bởi nhà cung cấp được ủy quyền. Gói dịch vụ sẽ tự động gia hạn trừ khi hủy ít nhất 24 giờ trước khi kết thúc chu kỳ hiện tại trong phần cài đặt tài khoản cửa hàng ứng dụng."
+  },
+  "disclaimers": {
+    "title": "Tuyên Bố Miễn Trừ",
+    "content": "Ứng dụng được cung cấp 'nguyên trạng' mà không có bất kỳ bảo đảm nào. Chúng tôi không đảm bảo dịch vụ sẽ luôn liên tục, an toàn hoặc không có lỗi, cũng như dữ liệu thời tiết sẽ luôn chính xác."
+  },
+  "liability": {
+    "title": "Giới Hạn Trách Nhiệm",
+    "content": "Trong phạm vi pháp luật cho phép, Juniper và các đối tác sẽ không chịu trách nhiệm cho bất kỳ thiệt hại gián tiếp, ngẫu nhiên hoặc đặc biệt nào phát sinh từ việc sử dụng ứng dụng."
+  },
+  "termination": {
+    "title": "Chấm Dứt",
+    "content": "Chúng tôi có thể đình chỉ hoặc chấm dứt quyền truy cập ứng dụng bất cứ lúc nào nếu bạn vi phạm các điều khoản. Khi chấm dứt, giấy phép sử dụng ứng dụng sẽ kết thúc ngay lập tức."
+  },
+  "changes": {
+    "title": "Thay Đổi Điều Khoản",
+    "content": "Chúng tôi có thể cập nhật điều khoản theo thời gian. Việc tiếp tục sử dụng ứng dụng đồng nghĩa với việc bạn chấp nhận điều khoản mới."
+  },
+  "contact": {
+    "title": "Liên Hệ",
+    "content": "Nếu bạn có câu hỏi về điều khoản này, vui lòng liên hệ bộ phận hỗ trợ qua trang Thông tin."
+  }
+}

@@ -115,6 +115,38 @@
   padding-bottom: 0;
 }
 
+.cloud-item {
+  position: relative;
+}
+
+.cloud-content {
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  max-width: 50%;
+  font-size: 16px;
+}
+
+.clouds-grid .cloud-item:nth-child(1) .cloud-content {
+  top: 95px;
+
+}
+
+.clouds-grid .cloud-item:nth-child(2) .cloud-content {
+  top: 125px;
+  margin-left: 30px;
+}
+
+.clouds-grid .cloud-item:nth-child(3) .cloud-content {
+  top: 125px;
+
+}
+
+.clouds-grid .cloud-item:nth-child(4) .cloud-content {
+  top: 115px;
+
+}
+
 @media (max-width:743.98px) {
   .cloud-icon {
     font-size: 18px;
@@ -197,6 +229,25 @@
     justify-content: center;
   }
 
+  .clouds-grid .cloud-item:nth-child(1) .cloud-content {
+    top: 105px;
+
+  }
+
+  .clouds-grid .cloud-item:nth-child(2) .cloud-content {
+    top: 130px;
+    margin-left: 30px;
+  }
+
+  .clouds-grid .cloud-item:nth-child(3) .cloud-content {
+    top: 135px;
+
+  }
+
+  .clouds-grid .cloud-item:nth-child(4) .cloud-content {
+    top: 115px;
+
+  }
 }
 
 /* Tablet (744–1023.98px): mỗi slide chứa 2 item, xếp dọc như hình */
@@ -233,7 +284,36 @@
     margin-right: 0px;
     margin-left: 100px;
   }
+
+
+  /* Slide 0 - item 0 */
+  .cloud-item.item-0-0 .cloud-content {
+    top: 115px;
+    left: 105px;
+  }
+
+  /* Slide 0 - item 1 */
+  .cloud-item.item-0-1 .cloud-content {
+    top: 125px;
+    left: 125px;
+  }
+
+  /* Slide 1 - item 0 */
+  .cloud-item.item-1-0 .cloud-content {
+    top: 135px;
+    left: 115px;
+  }
+
+  /* Slide 1 - item 1 */
+  .cloud-item.item-1-1 .cloud-content {
+    top: 115px;
+    left: 115px;
+  }
+
+
 }
+
+
 
 /* Mobile (<744px): 1 item/slide */
 @media (max-width:743.98px) {
@@ -241,5 +321,41 @@
     flex: 0 0 100%;
     box-sizing: border-box;
     padding: 0 10px;
+  }
+
+
+  .cloud-item {
+    display: flex;
+    justify-content: center;
+
+  }
+
+  .cloud-content {
+    max-width: 80%;
+  }
+
+  .cloud-item.item-0-0 .cloud-content {}
+
+  .cloud-item.item-1-0 .cloud-content {
+    margin-left: 40px;
+    margin-top: 50px;
+  }
+
+  .cloud-item.item-2-0 .cloud-content {
+    margin-top: 90px;
+  }
+
+  .cloud-item.item-3-0 .cloud-content {}
+}
+
+@media (max-width:1439.98px) {
+  .cloud-content {
+    font-size: 14px;
+  }
+}
+
+@media (min-width:480px) and (max-width:744px) {
+  .cloud-content {
+    max-width: 40%;
   }
 }

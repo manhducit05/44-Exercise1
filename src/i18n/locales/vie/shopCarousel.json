@@ -1,0 +1,32 @@
+{
+  "plans": {
+    "free": {
+      "title": "MIỄN PHÍ",
+      "price": "0₫",
+      "f1": "Thông tin thời tiết cơ bản tại vị trí của bạn",
+      "f2": "Chia sẻ với 1 người khác",
+      "f3": "Dự báo theo giờ và theo ngày",
+      "f4": "Giao diện đẹp và trực quan"
+    },
+    "couple": {
+      "title": "CẶP ĐÔI",
+      "price": "59.000₫",
+      "f1": "Thông tin thời tiết nâng cao cho mọi vị trí",
+      "f2": "Chia sẻ với tối đa 5 người",
+      "f3": "Dự báo theo tuần và tháng",
+      "f4": "Chủ đề và widget tùy chỉnh",
+      "f5": "Nhóm thời tiết, sticker, emoji và gif",
+      "f6": "Blog và podcast độc quyền"
+    },
+    "pro": {
+      "title": "CHUYÊN NGHIỆP",
+      "price": "119.000₫",
+      "f1": "Thông tin thời tiết độc quyền từ công nghệ đám mây",
+      "f2": "Chia sẻ với số lượng người không giới hạn",
+      "f3": "Dự báo cá nhân hóa theo sở thích và hoạt động",
+      "f4": "Xu hướng, cảnh báo và khuyến nghị thời tiết",
+      "f5": "Tính năng và phần thưởng đặc biệt"
+    },
+    "button": "ĐĂNG KÝ"
+  }
+}

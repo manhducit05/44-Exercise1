@@ -1,0 +1,27 @@
+{
+  "pages": {
+    "title": "Trang",
+    "home": "Trang chủ",
+    "info": "Thông tin",
+    "shop": "Cửa hàng",
+    "tos": "Điều khoản"
+  },
+  "platform": {
+    "title": "Nền tảng",
+    "android": "Android",
+    "ios": "iOS",
+    "windows": "Windows",
+    "macos": "Mac OS"
+  },
+  "support": {
+    "title": "Hỗ trợ",
+    "request": "Yêu cầu hỗ trợ",
+    "contact": "Liên hệ"
+  },
+  "subscribe": {
+    "title": "Đăng ký",
+    "placeholder": "Nhập email của bạn",
+    "hint": "Đăng ký nhận bản tin để luôn cập nhật tính năng và phát hành mới."
+  },
+  "getNow": "TẢI NGAY"
+}

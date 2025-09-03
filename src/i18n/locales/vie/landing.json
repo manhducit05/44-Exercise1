@@ -1,0 +1,60 @@
+{
+  "hero": {
+    "title": "Dự Báo Thời Tiết Trực Tiếp Của Bạn",
+    "sub": "Cùng nhau dự báo: Xây dựng ước mơ, từng ngày một!",
+    "small": "Hơn 1 triệu người giống bạn đã sử dụng sản phẩm này!",
+    "tryNow": "DÙNG THỬ NGAY",
+    "free": "MIỄN PHÍ ĐẾN 15/06/2023"
+  },
+  "features": [
+    {
+      "icon": "/images/landingIcon1.png",
+      "title": "Cá nhân hóa",
+      "desc": "Báo cáo thời tiết cá nhân hóa hiển thị thời gian và địa điểm tốt nhất cho các cặp đôi tận hưởng hoạt động ngoài trời dựa trên sở thích và vị trí."
+    },
+    {
+      "icon": "/images/landingIcon2.png",
+      "title": "Thư viện mây",
+      "desc": "Thư viện đám mây cho phép người dùng tải lên và chia sẻ ảnh, video về bầu trời và thời tiết với cộng đồng, đồng thời nhận phản hồi và gợi ý."
+    },
+    {
+      "icon": "/images/landingIcon1.png",
+      "title": "Theo dõi tâm trạng",
+      "desc": "Theo dõi tâm trạng phân tích cảm xúc của bạn dựa trên thời tiết và gợi ý hoạt động, âm nhạc hoặc trích dẫn để giúp bạn vui vẻ hoặc thư giãn."
+    }
+  ],
+  "plan": {
+    "title": "Lập kế hoạch hoạt động ngoài trời thật dễ dàng",
+    "lead": "Nhận thông báo trước khi mưa tạnh. Sẵn sàng cho mọi hoạt động",
+    "bullets": [
+      "Chia sẻ câu chuyện và hình ảnh thời tiết của bạn.",
+      "Tùy chỉnh cảnh báo và thông báo thời tiết.",
+      "Tích hợp thông minh với thiết bị gia đình."
+    ]
+  },
+  "faqs": [
+    {
+      "q": "Làm sao để tùy chỉnh ứng dụng Juniper cho phù hợp?",
+      "a": "Bạn có thể cá nhân hóa ứng dụng Juniper trong phần Cài đặt hoặc Hồ sơ..."
+    },
+    {
+      "q": "Làm sao để chia sẻ dự báo với người yêu?",
+      "a": "Ứng dụng cho phép bạn chia sẻ trực tiếp qua nút 'Chia sẻ'..."
+    },
+    {
+      "q": "Thời gian dùng thử miễn phí của ứng dụng là bao lâu?",
+      "a": "Thời gian dùng thử miễn phí là 14 ngày..."
+    },
+    {
+      "q": "Điều gì xảy ra sau khi kết thúc dùng thử?",
+      "a": "Sau khi kết thúc, tài khoản của bạn sẽ tự động chuyển về gói miễn phí..."
+    }
+  ],
+  "faqTitle": "Ứng Dụng Thời Tiết Mang Đến Điều Kỳ Diệu",
+  "faqSubtitle": "Chúng tôi quan tâm đến niềm vui và sức khỏe của bạn, bất kể thời tiết",
+  "faqFooter": {
+    "experience": "Trải nghiệm thời tiết chưa từng có",
+    "highlight": "Ứng dụng duy nhất bạn cần để kết nối với thiên nhiên và nhau"
+  },
+  "download": "TẢI NGAY"
+}

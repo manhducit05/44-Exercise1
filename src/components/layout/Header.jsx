@@ -7,7 +7,8 @@ import { Dropdown, Button } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 
 const Header = () => {
-  const { t, i18n } = useTranslation();
+  // chỉ định namespace "common"
+  const { t, i18n } = useTranslation("common");
   const [lang, setLang] = useState(i18n.language || "vi");
 
   const changeLanguage = (lng) => {
@@ -16,9 +17,15 @@ const Header = () => {
 
   // cập nhật khi ngôn ngữ thay đổi
   useEffect(() => {
-    i18n.on("languageChanged", (lng) => setLang(lng));
+    const handleLangChange = (lng) => setLang(lng);
+    i18n.on("languageChanged", handleLangChange);
+
+    return () => {
+      i18n.off("languageChanged", handleLangChange);
+    };
   }, [i18n]);
 
+  // menu dropdown ngôn ngữ
   const items = [
     {
       key: "en",
@@ -38,7 +45,9 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg custom-navbar custom-container">
         <div className="container-xxl">
           {/* Logo */}
-          <NavLink className="navbar-brand fw-bold text-white" to="/">JUNIPER</NavLink>
+          <NavLink className="navbar-brand fw-bold text-white" to="/">
+            JUNIPER
+          </NavLink>
 
           {/* Toggle cho mobile */}
           <button
@@ -54,32 +63,58 @@ const Header = () => {
           </button>
 
           {/* Menu */}
-          <div className="collapse navbar-collapse justify-content-end" id="mainNav">
+          <div
+            className="collapse navbar-collapse justify-content-end"
+            id="mainNav"
+          >
             <ul className="navbar-nav gap-3 align-items-center">
               <li className="nav-item">
-                <NavLink to="/" end className="nav-link" style={{ fontSize: "16px" }}>
+                <NavLink
+                  to="/"
+                  end
+                  className="nav-link"
+                  style={{ fontSize: "16px" }}
+                >
                   {t("home")}
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/info" className="nav-link" style={{ fontSize: "16px" }}>
+                <NavLink
+                  to="/info"
+                  className="nav-link"
+                  style={{ fontSize: "16px" }}
+                >
                   {t("info")}
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/shop" className="nav-link" style={{ fontSize: "16px" }}>
+                <NavLink
+                  to="/shop"
+                  className="nav-link"
+                  style={{ fontSize: "16px" }}
+                >
                   {t("shop")}
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/tos" className="nav-link" style={{ fontSize: "16px" }}>
+                <NavLink
+                  to="/tos"
+                  className="nav-link"
+                  style={{ fontSize: "16px" }}
+                >
                   {t("tos")}
                 </NavLink>
               </li>
+
               {/* Nút kính lúp */}
               <li className="nav-item">
-                <img alt="nav-icon" src="/images/button-search.png" className="searchBtn" />
+                <img
+                  alt="nav-icon"
+                  src="/images/button-search.png"
+                  className="searchBtn"
+                />
               </li>
+
               {/* Dropdown chọn ngôn ngữ */}
               <li className="nav-item">
                 <Dropdown
@@ -90,7 +125,8 @@ const Header = () => {
                   overlayClassName="custom-dropdown"
                 >
                   <Button className="lang-btn" type="text">
-                    {displayLang} <DownOutlined style={{ fontSize: "12px", marginLeft: "4px" }} />
+                    {displayLang}{" "}
+                    <DownOutlined style={{ fontSize: "12px", marginLeft: "4px" }} />
                   </Button>
                 </Dropdown>
               </li>

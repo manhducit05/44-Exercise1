@@ -1,0 +1,45 @@
+{
+  "compare": {
+    "juniper": "JUNIPER",
+    "other": "CÔNG TY KHÁC",
+    "rows": [
+      {
+        "key": "Công nghệ đám mây",
+        "left": "Công nghệ đám mây cho dự báo đáng tin cậy",
+        "right": "Ứng dụng khác dùng nguồn dữ liệu lỗi thời"
+      },
+      {
+        "key": "Giao diện đơn giản",
+        "left": "Giao diện đơn giản và trực quan",
+        "right": "Ứng dụng khác giao diện rối rắm"
+      },
+      {
+        "key": "Dự báo 10 ngày",
+        "left": "Dự báo 10 ngày với cập nhật theo giờ",
+        "right": "Ứng dụng khác chỉ 7 ngày hoặc ít hơn"
+      },
+      {
+        "key": "Cảnh báo thời tiết",
+        "left": "Cảnh báo và thông báo thời tiết nguy hiểm",
+        "right": "Ứng dụng khác không cảnh báo"
+      },
+      {
+        "key": "Dữ liệu chất lượng không khí",
+        "left": "Thông tin và bản đồ chất lượng không khí",
+        "right": "Ứng dụng khác không có dữ liệu này"
+      },
+      {
+        "key": "Bản đồ thời tiết",
+        "left": "Bản đồ nhiệt độ và lượng mưa",
+        "right": "Ứng dụng khác không hiển thị toàn cầu"
+      },
+      {
+        "key": "Giá cả hợp lý",
+        "left": "Chi phí thấp, dễ tiếp cận",
+        "right": "Ứng dụng khác thu phí cao"
+      }
+    ]
+  },
+  "download": "TẢI NGAY",
+  "specsTitle": "Đặc tả đám mây"
+}

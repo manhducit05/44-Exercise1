@@ -1,0 +1,60 @@
+{
+  "hero": {
+    "title": "Your Live Forecaster",
+    "sub": "Together We Forecast: Building Dreams, One Day at a Time!",
+    "small": "1 million People like you have purchased this product!",
+    "tryNow": "TRY NOW",
+    "free": "FREE TILL 15JUN2023"
+  },
+  "features": [
+    {
+      "icon": "/images/landingIcon1.png",
+      "title": "Personalized",
+      "desc": "A personalized weather report that shows the best time and place for couples to enjoy outdoor activities based on their preferences and location."
+    },
+    {
+      "icon": "/images/landingIcon2.png",
+      "title": "Gallery",
+      "desc": "A cloud gallery that allows users to upload and share their photos and videos of the sky and the weather with other users and get feedback and tips."
+    },
+    {
+      "icon": "/images/landingIcon1.png",
+      "title": "Mood Tracker",
+      "desc": "A mood tracker that analyzes the user's mood based on the weather and suggests activities, music, or quotes to cheer them up or calm them down."
+    }
+  ],
+  "plan": {
+    "title": "Plan Your Outdoor Activities with Ease",
+    "lead": "Get notified before rain stops. Plan your outdoor activities",
+    "bullets": [
+      "Share your weather stories and photos.",
+      "Custom weather alerts and notifications.",
+      "Smart weather integrations for your home."
+    ]
+  },
+  "faqs": [
+    {
+      "q": "How can I customize the Juniper app to suit my needs?",
+      "a": "You can personalize the Juniper app by adjusting the settings..."
+    },
+    {
+      "q": "How can I share my weather updates with my partner?",
+      "a": "The app allows you to share updates directly through the 'Share' button..."
+    },
+    {
+      "q": "How long is the free trial for the Juniper app?",
+      "a": "The free trial lasts for 14 days..."
+    },
+    {
+      "q": "What happens after the free trial ends?",
+      "a": "Once your free trial is over, your account will automatically switch..."
+    }
+  ],
+  "faqTitle": "The Weather App That Brings You Wonder",
+  "faqSubtitle": "We care about your happiness and well-being, no matter the weather",
+  "faqFooter": {
+    "experience": "Experience the weather like never before",
+    "highlight": "The Only Weather App You Need to Stay Connected with Nature and Each Other"
+  },
+  "download": "DOWNLOAD NOW"
+}

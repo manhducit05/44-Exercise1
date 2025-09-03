@@ -1,0 +1,20 @@
+{
+  "priyanka": {
+    "name": "Priyanka",
+    "role": "Khách hàng hài lòng",
+    "slides": [
+      "Juniper là một ứng dụng tuyệt vời để kiểm tra thời tiết. Ứng dụng dễ sử dụng và có giao diện rất đẹp. Tôi thích cách nó hiển thị mô hình mây và dự đoán thời tiết trong vài ngày tới. Giống như có một nhà khí tượng riêng trong túi vậy.",
+      "Các cảnh báo rất kịp thời và hữu ích. Tôi có thể tự tin lên kế hoạch đi leo núi.",
+      "Thiết kế mượt mà và nhanh. Tôi đã giới thiệu cho bạn bè."
+    ]
+  },
+  "jack": {
+    "name": "Jack",
+    "role": "Khách hàng hài lòng",
+    "slides": [
+      "Ban đầu tôi hơi nghi ngờ về Juniper, nhưng tôi rất vui vì đã thử. Đây là một cách hoàn toàn mới để nhìn bầu trời. Ứng dụng sử dụng công nghệ đám mây để mang lại dự báo chính xác và đáng tin cậy. Đây là ứng dụng không thể thiếu cho những ai yêu thiên nhiên.",
+      "Dự báo rất đáng tin cậy cho các chuyến đi cuối tuần của tôi.",
+      "Tôi rất thích phần đố vui và nghệ thuật mây — rất thú vị!"
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "pages": {
+    "title": "Pages",
+    "home": "Home",
+    "info": "Info",
+    "shop": "Shop",
+    "tos": "TOS"
+  },
+  "platform": {
+    "title": "Platform",
+    "android": "Android",
+    "ios": "iOS",
+    "windows": "Windows",
+    "macos": "Mac OS"
+  },
+  "support": {
+    "title": "Support",
+    "request": "Support request",
+    "contact": "Contact Us"
+  },
+  "subscribe": {
+    "title": "Subscribe",
+    "placeholder": "Enter your email",
+    "hint": "Join our newsletter to stay up to date on features and releases."
+  },
+  "getNow": "GET NOW"
+}

@@ -1,19 +1,13 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import "./testimonialCarousel.css"; // CSS bạn để riêng
 
 const Testimonials = () => {
-  // dữ liệu cho từng user
-  const priyankaSlides = [
-    `Juniper is a great app for checking the weather. It's easy to use and has a beautiful interface. I love how it shows me the cloud patterns and predicts the weather for the next few days. It's like having a personal meteorologist in my pocket.`,
-    `The alerts are timely and useful. I plan hikes with confidence now.`,
-    `The design is smooth and fast. Highly recommend to my friends.`,
-  ];
+  const { t } = useTranslation("testimonials");
 
-  const jackSlides = [
-    `I was sceptical about Juniper at first, but I'm glad I gave it a try. It's a whole new way of looking at the sky. It uses cloud technology to give me accurate and reliable forecasts, and it also has some fun features like cloud art and trivia. It's a must-have app for anyone who loves nature.`,
-    `Forecasts have been reliable for my weekend trips.`,
-    `Love the trivia and cloud art—nice touch!`,
-  ];
+  // dữ liệu cho từng user lấy từ i18n
+  const priyankaSlides = t("priyanka.slides", { returnObjects: true });
+  const jackSlides = t("jack.slides", { returnObjects: true });
 
   // state riêng cho từng card
   const [idxPriyanka, setIdxPriyanka] = useState(0);
@@ -41,12 +35,12 @@ const Testimonials = () => {
             <p className="t-text">{priyankaSlides[idxPriyanka]}</p>
             <div className="t-user">
               <div className="avt-name">
-                <img src="/images/avatar1.png" alt="Priyanka" className="t-avatar" />
+                <img src="/images/avatar1.png" alt={t("priyanka.name")} className="t-avatar" />
                 <div>
-                  <h4 className="t-name">Priyanka</h4>
+                  <h4 className="t-name">{t("priyanka.name")}</h4>
                 </div>
               </div>
-              <p className="t-role">Happy Customer</p>
+              <p className="t-role">{t("priyanka.role")}</p>
             </div>
           </div>
 
@@ -77,14 +71,13 @@ const Testimonials = () => {
             <p className="t-text">{jackSlides[idxJack]}</p>
             <div className="t-user">
               <div className="avt-name">
-                <img src="/images/avatar2.png" alt="Jack" className="t-avatar" />
+                <img src="/images/avatar2.png" alt={t("jack.name")} className="t-avatar" />
                 <div>
-                  <h4 className="t-name">Jack</h4>
+                  <h4 className="t-name">{t("jack.name")}</h4>
                 </div>
               </div>
-              <p className="t-role">Happy Customer</p>
+              <p className="t-role">{t("jack.role")}</p>
             </div>
-
           </div>
 
           <button
@@ -100,9 +93,9 @@ const Testimonials = () => {
             ))}
           </div>
         </div>
-
       </div>
     </section>
   );
-}
+};
+
 export default Testimonials;
