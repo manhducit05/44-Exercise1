@@ -7,7 +7,7 @@ const resources = {
       home: "Home",
       info: "Info",
       shop: "Shop",
-      tos: "Terms of Service",
+      tos: "TOS",
     },
   },
   vi: {

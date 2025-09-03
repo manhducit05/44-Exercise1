@@ -84,8 +84,11 @@
   bottom: 10px;
 }
 
+.t-role {
+  color: #919191;
+}
+
 .t-slide {
-  padding-top: 10px;
   padding-bottom: 40px;
 }
 
