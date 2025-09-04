@@ -8,7 +8,7 @@ const LandingPage = lazy(() => import("../pages/LandingPage"));
 const InfoPage = lazy(() => import("../pages/InforPage"));
 const ShopPage = lazy(() => import("../pages/ShopPage"));
 const TosPage = lazy(() => import("../pages/TosPage"));
-
+const WeatherDashboard = lazy(() => import("../pages/Forecaster"));
 const AppRouter = () => {
   return (
     <Router>
@@ -25,6 +25,7 @@ const AppRouter = () => {
             <Route path="/info" element={<InfoPage />} />
             <Route path="/shop" element={<ShopPage />} />
             <Route path="/tos" element={<TosPage />} />
+            <Route path="/forecaster" element={<WeatherDashboard />} />
           </Routes>
         </Suspense>
       </Layout>
