@@ -3,9 +3,7 @@ import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../styles/Layout.css";
-import { Dropdown, Button } from "antd";
-import { DownOutlined } from "@ant-design/icons";
-
+import { Segmented } from "antd";
 const Header = () => {
   // chỉ định namespace "common"
   const { t, i18n } = useTranslation("common");
@@ -25,20 +23,6 @@ const Header = () => {
     };
   }, [i18n]);
 
-  // menu dropdown ngôn ngữ
-  const items = [
-    {
-      key: "en",
-      label: <span onClick={() => changeLanguage("en")}>English</span>,
-    },
-    {
-      key: "vi",
-      label: <span onClick={() => changeLanguage("vi")}>Tiếng Việt</span>,
-    },
-  ];
-
-  // map tên hiển thị
-  const displayLang = lang === "en" ? "EN" : "VI";
 
   return (
     <header>
@@ -116,7 +100,7 @@ const Header = () => {
               </li>
 
               {/* Dropdown chọn ngôn ngữ */}
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Dropdown
                   menu={{ items }}
                   placement="bottomRight"
@@ -129,6 +113,17 @@ const Header = () => {
                     <DownOutlined style={{ fontSize: "12px", marginLeft: "4px" }} />
                   </Button>
                 </Dropdown>
+              </li> */}
+              <li className="nav-item">
+                <Segmented
+                  options={[
+                    { label: "EN", value: "en" },
+                    { label: "VIE", value: "vi" },
+                  ]}
+                  value={lang}
+                  onChange={(val) => changeLanguage(val)}
+                  className="lang-segmented"
+                />
               </li>
             </ul>
           </div>

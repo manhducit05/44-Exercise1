@@ -80,7 +80,7 @@ const ShopCarousel = () => {
               style={{ backgroundImage: `url(${p.bg})` }}
             >
               <div className="head">
-                <div className="plan-title">{t(p.titleKey)}</div>
+                <div className="card-title">{t(p.titleKey)}</div>
                 <p className="plan-price">{t(p.priceKey)}</p>
               </div>
               <div className="main">
@@ -122,7 +122,7 @@ const ShopCarousel = () => {
                     style={{ backgroundImage: `url(${p.bg})` }}
                   >
                     <div className="head">
-                      <div className="plan-title">{t(p.titleKey)}</div>
+                      <div className="card-title">{t(p.titleKey)}</div>
                       <p className="plan-price">{t(p.priceKey)}</p>
                     </div>
                     <div className="main">

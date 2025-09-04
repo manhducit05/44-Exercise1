@@ -50,6 +50,18 @@ header {
   padding: 8px 0;
 }
 
+.lang-segmented {
+  background: #fff;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.lang-segmented .ant-segmented-item-selected {
+  background: #d2962c;
+  color: #fff;
+}
+
 /* Logo */
 
 

@@ -1,59 +1,59 @@
 {
   "hero": {
-    "title": "Dự Báo Thời Tiết Trực Tiếp Của Bạn",
-    "sub": "Cùng nhau dự báo: Xây dựng ước mơ, từng ngày một!",
-    "small": "Hơn 1 triệu người giống bạn đã sử dụng sản phẩm này!",
-    "tryNow": "DÙNG THỬ NGAY",
-    "free": "MIỄN PHÍ ĐẾN 15/06/2023"
+    "title": "Người Dự Báo Thời Tiết Của Bạn",
+    "sub": "Cùng Nhau Dự Báo: Xây Giấc Mơ, Từng Ngày Một!",
+    "small": "1 triệu người giống bạn đã mua sản phẩm này!",
+    "tryNow": "DÙNG NGAY",
+    "free": "MIỄN PHÍ ĐẾN 15-06-2023"
   },
   "features": [
     {
       "icon": "/images/landingIcon1.png",
-      "title": "Cá nhân hóa",
-      "desc": "Báo cáo thời tiết cá nhân hóa hiển thị thời gian và địa điểm tốt nhất cho các cặp đôi tận hưởng hoạt động ngoài trời dựa trên sở thích và vị trí."
+      "title": "Cá Nhân Hóa",
+      "desc": "Bản tin thời tiết cá nhân hóa cho biết thời điểm và địa điểm tốt nhất để các cặp đôi tận hưởng ngoài trời theo sở thích và vị trí của họ."
     },
     {
       "icon": "/images/landingIcon2.png",
-      "title": "Thư viện mây",
-      "desc": "Thư viện đám mây cho phép người dùng tải lên và chia sẻ ảnh, video về bầu trời và thời tiết với cộng đồng, đồng thời nhận phản hồi và gợi ý."
+      "title": "Thư Viện",
+      "desc": "Thư viện mây cho phép người dùng tải lên và chia sẻ ảnh, video bầu trời cùng thời tiết với cộng đồng và nhận phản hồi, gợi ý."
     },
     {
       "icon": "/images/landingIcon1.png",
-      "title": "Theo dõi tâm trạng",
-      "desc": "Theo dõi tâm trạng phân tích cảm xúc của bạn dựa trên thời tiết và gợi ý hoạt động, âm nhạc hoặc trích dẫn để giúp bạn vui vẻ hoặc thư giãn."
+      "title": "Theo Dõi Tâm Trạng",
+      "desc": "Trình theo dõi tâm trạng phân tích cảm xúc dựa trên thời tiết và gợi ý hoạt động, âm nhạc hoặc câu nói để khích lệ hay làm dịu tâm hồn."
     }
   ],
   "plan": {
-    "title": "Lập kế hoạch hoạt động ngoài trời thật dễ dàng",
-    "lead": "Nhận thông báo trước khi mưa tạnh. Sẵn sàng cho mọi hoạt động",
+    "title": "Lên Kế Hoạch Ngoài Trời Dễ Dàng",
+    "lead": "Nhận thông báo trước khi mưa tạnh. Lên kế hoạch cho hoạt động ngoài trời",
     "bullets": [
-      "Chia sẻ câu chuyện và hình ảnh thời tiết của bạn.",
-      "Tùy chỉnh cảnh báo và thông báo thời tiết.",
-      "Tích hợp thông minh với thiết bị gia đình."
+      "Chia sẻ câu chuyện và ảnh thời tiết của bạn.",
+      "Cảnh báo và thông báo thời tiết tùy chỉnh.",
+      "Tích hợp thời tiết thông minh cho ngôi nhà."
     ]
   },
   "faqs": [
     {
-      "q": "Làm sao để tùy chỉnh ứng dụng Juniper cho phù hợp?",
-      "a": "Bạn có thể cá nhân hóa ứng dụng Juniper trong phần Cài đặt hoặc Hồ sơ..."
+      "q": "Làm sao cá nhân hóa ứng dụng Juniper theo nhu cầu?",
+      "a": "Bạn có thể điều chỉnh ứng dụng Juniper bằng cách thay đổi cài đặt..."
     },
     {
-      "q": "Làm sao để chia sẻ dự báo với người yêu?",
+      "q": "Làm sao chia sẻ cập nhật thời tiết với người yêu?",
       "a": "Ứng dụng cho phép bạn chia sẻ trực tiếp qua nút 'Chia sẻ'..."
     },
     {
-      "q": "Thời gian dùng thử miễn phí của ứng dụng là bao lâu?",
-      "a": "Thời gian dùng thử miễn phí là 14 ngày..."
+      "q": "Thời gian dùng thử miễn phí ứng dụng Juniper là bao lâu?",
+      "a": "Bản dùng thử miễn phí kéo dài 14 ngày..."
     },
     {
-      "q": "Điều gì xảy ra sau khi kết thúc dùng thử?",
-      "a": "Sau khi kết thúc, tài khoản của bạn sẽ tự động chuyển về gói miễn phí..."
+      "q": "Điều gì xảy ra sau khi hết thời gian dùng thử?",
+      "a": "Khi bản dùng thử kết thúc, tài khoản của bạn sẽ tự động chuyển..."
     }
   ],
   "faqTitle": "Ứng Dụng Thời Tiết Mang Đến Điều Kỳ Diệu",
-  "faqSubtitle": "Chúng tôi quan tâm đến niềm vui và sức khỏe của bạn, bất kể thời tiết",
+  "faqSubtitle": "Chúng tôi quan tâm đến hạnh phúc và sức khỏe của bạn, bất kể thời tiết",
   "faqFooter": {
-    "experience": "Trải nghiệm thời tiết chưa từng có",
+    "experience": "Trải nghiệm thời tiết theo cách chưa từng có",
     "highlight": "Ứng dụng duy nhất bạn cần để kết nối với thiên nhiên và nhau"
   },
   "download": "TẢI NGAY"
