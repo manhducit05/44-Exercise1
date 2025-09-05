@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   LineChart,
   Line,
@@ -8,11 +9,15 @@ import {
   CartesianGrid,
   ResponsiveContainer,
 } from "recharts";
+import { Spin } from "antd";
+import "../styles/Forecaster.css";
 
 const WeatherChart = () => {
+  const { t } = useTranslation("forecaster"); // namespace forecaster
   const [data, setData] = useState([]);
   const [currentWeather, setCurrentWeather] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [timezone, setTimezone] = useState("");
 
   const API =
     "https://api.opensearch.vn/v1/weather/forecast/hourly?latitude=21.0255613&longitude=105.7857475";
@@ -37,6 +42,7 @@ const WeatherChart = () => {
 
         setData(chartData);
         setCurrentWeather(json.data.current_weather);
+        setTimezone(json.data.timezone);
         setLoading(false);
       })
       .catch((err) => {
@@ -45,79 +51,98 @@ const WeatherChart = () => {
       });
   }, []);
 
-  if (loading) return <p>Đang tải dữ liệu...</p>;
-
-  // Hàm chuyển weatherCode thành trạng thái mây
+  if (loading) {
+    return (
+      <div style={{ textAlign: "center", padding: "200px 0" }}>
+        <Spin size="large" tip={t("loading")} />
+      </div>
+    );
+  }
   const getWeatherText = (code) => {
-    switch (code) {
-      case 0:
-        return "Clear";
-      case 1:
-        return "Cloudy";
-      case 2:
-        return "Partly Cloudy";
-      case 3:
-        return "Overcast";
-      default:
-        return "Unknown";
-    }
+    return t(`weatherCodes.${code}`, { defaultValue: t("weatherCodes.default") });
   };
 
   return (
-    <div style={{ width: "100%", padding: 200, borderRadius: 10 }}>
-      {/* Current Weather */}
-      {currentWeather && (
-        <div style={{ marginBottom: 20 }}>
-          <h3>Current Weather</h3>
-          <p style={{ fontSize: 24 }}>
-            {getWeatherText(currentWeather.weathercode)} - {currentWeather.temperature}°C
-          </p>
-          <p>Time: {currentWeather.time.slice(11, 16)}</p>
-        </div>
-      )}
-
-      {/* Activities Nearby */}
-      <div style={{ marginBottom: 20 }}>
-        <h3>Activities in your area</h3>
-        <div style={{ display: "flex", gap: 10 }}>
-          <img src="/activities/activity1.jpg" alt="Activity 1" width={120} height={80} />
-          <img src="/activities/activity2.jpg" alt="Activity 2" width={120} height={80} />
-          <img src="/activities/activity3.jpg" alt="Activity 3" width={120} height={80} />
-          <img src="/activities/activity4.jpg" alt="Activity 4" width={120} height={80} />
-        </div>
-      </div>
-
-      {/* Air Conditions */}
-      <div style={{ marginBottom: 20 }}>
-        <h3>Air Conditions</h3>
-        {data.length > 0 && (
-          <ul>
-            <li>Real Feel: {data[0].temperature}°C</li>
-            <li>Wind: {data[0].windspeed} km/h</li>
-            <li>Humidity: {data[0].humidity}%</li>
-          </ul>
+    <div className="weather-dashboard">
+      <div className="custom-container">
+        {/* Current Weather */}
+        {currentWeather && (
+          <div className="current-weather" style={{ marginBottom: 20 }}>
+            <div className="position">
+              <img src="/images/position.svg" alt="position" />
+              {t("currentWeather.timezone")}: {timezone}
+            </div>
+            <div className="weather-status">
+              {getWeatherText(currentWeather.weathercode)}
+            </div>
+            <div className="temp" style={{ marginTop: 50 }}>
+              {t("currentWeather.temperature")}: {currentWeather.temperature}°C
+            </div>
+            <div className="time">
+              {t("currentWeather.time")}:{" "}
+              {new Date(currentWeather.time).toLocaleString("vi-VN", {
+                timeZone: timezone,
+                year: "numeric",
+                month: "2-digit",
+                day: "2-digit",
+                hour: "2-digit",
+                minute: "2-digit",
+              })}
+            </div>
+          </div>
         )}
-      </div>
 
-      {/* Temperature Chart */}
-      <div style={{ width: "100%", height: 400 }}>
-        <h3 style={{ textAlign: "center", marginBottom: 20 }}>Biểu đồ Nhiệt độ trong ngày</h3>
-        <ResponsiveContainer>
-          <LineChart data={data}>
-            <CartesianGrid strokeDasharray="3 3" stroke="#ddd" />
-            <XAxis dataKey="time" />
-            <YAxis unit="°C" domain={["auto", "auto"]} />
-            <Tooltip formatter={(val) => [`${val}°C`, "Nhiệt độ"]} />
-            <Line
-              type="monotone"
-              dataKey="temperature"
-              stroke="#ff7300"
-              strokeWidth={2}
-              dot={{ r: 3 }}
-              activeDot={{ r: 6 }}
-            />
-          </LineChart>
-        </ResponsiveContainer>
+        {/* Activities Nearby */}
+        <div className="activities" style={{ marginBottom: 20 }}>
+          <div className="activities-title">{t("activities.title")}</div>
+          <div className="act-gallery">
+            <img className="act" src="/images/act1.jfif" alt="Activity 1" />
+            <img className="act" src="/images/act2.jfif" alt="Activity 2" />
+            <img className="act" src="/images/act3.jfif" alt="Activity 3" />
+            <img className="act" src="/images/act4.jfif" alt="Activity 4" />
+          </div>
+        </div>
+
+        {/* Air Conditions */}
+        <div className="air-conditions">
+          <div className="conditions-title">{t("airConditions.title")}</div>
+          {data.length > 0 && (
+            <ul className="air-conditions-list">
+              <li className="real-feel">
+                {t("airConditions.realFeel")}: {data[0].temperature}°C
+              </li>
+              <li className="wind">
+                {t("airConditions.wind")}: {data[0].windspeed} km/h
+              </li>
+              <li className="humidity">
+                {t("airConditions.humidity")}: {data[0].humidity}%
+              </li>
+            </ul>
+          )}
+        </div>
+
+        {/* Temperature Chart */}
+        <div className="chart">
+          <h3 style={{ textAlign: "center", marginBottom: 20 }}>
+            {t("chart.title")}
+          </h3>
+          <ResponsiveContainer>
+            <LineChart data={data}>
+              <CartesianGrid strokeDasharray="3 3" stroke="#fff" />
+              <XAxis dataKey="time" stroke="#fff" />
+              <YAxis unit="°C" domain={["auto", "auto"]} stroke="#fff" />
+              <Tooltip formatter={(val) => [`${val}°C`, t("airConditions.realFeel")]} />
+              <Line
+                type="monotone"
+                dataKey="temperature"
+                stroke="#FFC355"
+                strokeWidth={2}
+                dot={{ r: 3 }}
+                activeDot={{ r: 6 }}
+              />
+            </LineChart>
+          </ResponsiveContainer>
+        </div>
       </div>
     </div>
   );

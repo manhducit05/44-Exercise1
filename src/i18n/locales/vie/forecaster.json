@@ -1,0 +1,28 @@
+{
+  "loading": "Đang tải dữ liệu...",
+  "currentWeather": {
+    "timezone": "Múi giờ",
+    "weatherStatus": "Trạng thái thời tiết",
+    "temperature": "Nhiệt độ",
+    "time": "Cập nhật"
+  },
+  "activities": {
+    "title": "Hoạt động xung quanh bạn"
+  },
+  "airConditions": {
+    "title": "Điều kiện không khí",
+    "realFeel": "Cảm giác thực",
+    "wind": "Gió",
+    "humidity": "Độ ẩm"
+  },
+  "chart": {
+    "title": "Dự báo 24 giờ"
+  },
+  "weatherCodes": {
+    "0": "Trời quang",
+    "1": "Nhiều mây",
+    "2": "Trời quang mây rải rác",
+    "3": "Trời u ám",
+    "default": "Không xác định"
+  }
+}

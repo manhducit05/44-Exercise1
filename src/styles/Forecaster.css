@@ -1,0 +1,283 @@
+.weather-dashboard {
+  background-color: #D2982D;
+  color: white;
+  padding-top: 50px;
+  padding-bottom: 200px;
+}
+
+.chart {
+  background-color: #DEAB4D;
+  height: 500px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 50px;
+}
+
+.position {
+  font-size: 36px;
+}
+
+.weather-status {
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.activities {
+  background-color: #DEAB4D;
+  padding: 40px 20px;
+  border-radius: 50px;
+}
+
+.temp {
+  font-size: 64px;
+}
+
+.time {
+  font-size: 18px;
+}
+
+.activities-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.activities-title {
+  position: relative;
+  padding-left: 30px;
+
+}
+
+.activities-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  /* kích thước icon */
+  height: 20px;
+  background-image: url('../../public/images/heart.svg');
+  /* đường dẫn đến icon */
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.act-gallery {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.act {
+  width: calc(25% - 20px);
+  object-fit: cover;
+  aspect-ratio: 3/2;
+  border-radius: 20px;
+}
+
+.air-conditions-list {
+  list-style: none;
+  padding: 0;
+}
+
+.air-conditions-list li {
+  position: relative;
+  padding-left: 30px;
+  /* khoảng trống cho icon */
+  margin-bottom: 8px;
+}
+
+.air-conditions-list li.real-feel::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-image: url('../../public/images/weather1.svg');
+  /* icon nhiệt độ */
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.air-conditions-list li.wind::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-image: url('../../public/images/weather2.svg');
+  /* icon gió */
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.air-conditions-list li.humidity::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-image: url('../../public/images/weather3.svg');
+  /* icon độ ẩm */
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.conditions-title {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.air-conditions-list li {
+  font-size: 18px;
+}
+
+/* ========== Responsive ========== */
+
+/* <= 1440px */
+@media (max-width: 1440px) {
+  .position {
+    font-size: 30px;
+  }
+
+  .weather-status {
+    font-size: 40px;
+  }
+
+  .temp {
+    font-size: 56px;
+  }
+
+  .time {
+    font-size: 16px;
+  }
+
+  .activities-title {
+    font-size: 24px;
+  }
+
+  .conditions-title {
+    font-size: 30px;
+  }
+
+  .air-conditions-list li {
+    font-size: 16px;
+  }
+}
+
+/* <= 1024px */
+@media (max-width: 1024px) {
+  .position {
+    font-size: 26px;
+  }
+
+  .weather-status {
+    font-size: 34px;
+  }
+
+  .temp {
+    font-size: 48px;
+  }
+
+  .time {
+    font-size: 15px;
+  }
+
+  .activities-title {
+    font-size: 22px;
+  }
+
+  .conditions-title {
+    font-size: 26px;
+  }
+
+  .air-conditions-list li {
+    font-size: 15px;
+  }
+}
+
+/* <= 744px (tablet nhỏ) */
+@media (max-width: 744px) {
+  .position {
+    font-size: 22px;
+  }
+
+  .weather-status {
+    font-size: 28px;
+  }
+
+  .temp {
+    font-size: 40px;
+  }
+
+  .time {
+    font-size: 14px;
+  }
+
+  .activities-title {
+    font-size: 20px;
+  }
+
+  .conditions-title {
+    font-size: 22px;
+  }
+
+  .air-conditions-list li {
+    font-size: 14px;
+  }
+
+  .act-gallery img:nth-child(n+3) {
+    display: none;
+  }
+
+  .act {
+    width: calc(50% - 10px);
+    /* 2 ảnh chia đôi */
+  }
+}
+
+/* <= 359px (mobile rất nhỏ) */
+@media (max-width: 359px) {
+  .position {
+    font-size: 18px;
+  }
+
+  .weather-status {
+    font-size: 22px;
+  }
+
+  .temp {
+    font-size: 32px;
+  }
+
+  .time {
+    font-size: 12px;
+  }
+
+  .activities-title {
+    font-size: 18px;
+  }
+
+  .conditions-title {
+    font-size: 20px;
+  }
+
+  .air-conditions-list li {
+    font-size: 12px;
+  }
+
+  .act {
+    width: 100%;
+    /* gallery 1 cột */
+  }
+}

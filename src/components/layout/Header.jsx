@@ -89,7 +89,15 @@ const Header = () => {
                   {t("tos")}
                 </NavLink>
               </li>
-
+              <li className="nav-item">
+                <NavLink
+                  to="/forecaster"
+                  className="nav-link"
+                  style={{ fontSize: "16px" }}
+                >
+                  {t("forecaster")}
+                </NavLink>
+              </li>
               {/* Nút kính lúp */}
               <li className="nav-item">
                 <img
@@ -98,22 +106,6 @@ const Header = () => {
                   className="searchBtn"
                 />
               </li>
-
-              {/* Dropdown chọn ngôn ngữ */}
-              {/* <li className="nav-item">
-                <Dropdown
-                  menu={{ items }}
-                  placement="bottomRight"
-                  trigger={["click"]}
-                  getPopupContainer={(triggerNode) => triggerNode.parentNode}
-                  overlayClassName="custom-dropdown"
-                >
-                  <Button className="lang-btn" type="text">
-                    {displayLang}{" "}
-                    <DownOutlined style={{ fontSize: "12px", marginLeft: "4px" }} />
-                  </Button>
-                </Dropdown>
-              </li> */}
               <li className="nav-item">
                 <Segmented
                   options={[

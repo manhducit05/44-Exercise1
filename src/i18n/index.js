@@ -17,9 +17,10 @@ import footer_vi from "./locales/vie/footer.json";
 /* thêm clouds */
 import clouds_en from "./locales/en/cloudCarousel.json";
 import clouds_vi from "./locales/vie/cloudCarousel.json";
-
 import shopCarousel_en from "./locales/en/shopCarousel.json";
 import shopCarousel_vi from "./locales/vie/shopCarousel.json";
+import forecaster_en from "./locales/en/forecaster.json";
+import forecaster_vi from "./locales/vie/forecaster.json";
 i18n
   .use(initReactI18next)
   .init({
@@ -29,27 +30,29 @@ i18n
         info: info_en,
         shop: shop_en,
         tos: tos_en,
-        landing: landing_en,   // thêm ở đây
+        landing: landing_en,
         testimonials: testimonials_en,
         clouds: clouds_en,
-        footer: footer_en, // ✅ thêm vào
-        shopCarousel: shopCarousel_en
+        shopCarousel: shopCarousel_en,
+        forecaster: forecaster_en,
+        footer: footer_en,
       },
       vi: {
         common: common_vi,
         info: info_vi,
         shop: shop_vi,
         tos: tos_vi,
-        landing: landing_vi,   // thêm ở đây
+        landing: landing_vi,
         testimonials: testimonials_vi,
         clouds: clouds_vi,
         shopCarousel: shopCarousel_vi,
-        footer: footer_vi,   // ✅ thêm vào
+        forecaster: forecaster_vi,
+        footer: footer_vi,
       },
     },
     lng: "en",
     fallbackLng: "en",
-    ns: ["common", "info", "shop", "tos", "landing", "testimonials", "clouds", "footer"], // namespace cho từng page
+    ns: ["common", "info", "shop", "tos", "landing", "testimonials", "clouds", "forecaster", "footer"], // namespace cho từng page
     defaultNS: "common",
     interpolation: {
       escapeValue: false,

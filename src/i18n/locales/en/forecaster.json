@@ -1,0 +1,28 @@
+{
+  "loading": "Loading data...",
+  "currentWeather": {
+    "timezone": "Timezone",
+    "weatherStatus": "Weather Status",
+    "temperature": "Temperature",
+    "time": "Updated"
+  },
+  "activities": {
+    "title": "Activities in your area"
+  },
+  "airConditions": {
+    "title": "Air Conditions",
+    "realFeel": "Real Feel",
+    "wind": "Wind",
+    "humidity": "Humidity"
+  },
+  "chart": {
+    "title": "24-hour forecast"
+  },
+  "weatherCodes": {
+    "0": "Clear",
+    "1": "Cloudy",
+    "2": "Partly Cloudy",
+    "3": "Overcast",
+    "default": "Unknown"
+  }
+}
