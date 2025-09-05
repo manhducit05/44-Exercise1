@@ -66,6 +66,11 @@ const Footer = () => {
                   {t("pages.tos")}
                 </NavLink>
               </li>
+              <li>
+                <NavLink to="/forecaster" className={({ isActive }) => (isActive ? "active" : "")}>
+                  {t("pages.forecaster")}
+                </NavLink>
+              </li>
             </ul>
           </div>
 

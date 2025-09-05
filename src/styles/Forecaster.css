@@ -245,7 +245,6 @@
     /* 2 ảnh chia đôi */
   }
 }
-
 /* <= 359px (mobile rất nhỏ) */
 @media (max-width: 359px) {
   .position {
